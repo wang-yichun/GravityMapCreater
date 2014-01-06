@@ -1,8 +1,10 @@
 #pragma once
 #include "cocos2d.h"
 #include "cocos-ext.h"
+#include <string>
 USING_NS_CC;
 USING_NS_CC_EXT;
+using namespace std;
 
 enum enumMapCellCode {
 	kNull = 0,
@@ -12,33 +14,22 @@ enum enumMapCellCode {
 /************************************************************************/
 /* 地图单元格子;
 /************************************************************************/
-struct MapCell {
+class MapCell {
 public:
+	MapCell();
+	MapCell(CCPoint loc, enumMapCellCode code);
+	~MapCell();
+
 	CCPoint loc; // 方格坐标;
 	enumMapCellCode code; // 编号;
 	CCSprite * primarySprite; // 主显示精灵;
+	CCLabelTTF * infoTTF; // 測試;
+	CCNode * parent; // 宿主;
 
+	void setMapCell(CCPoint loc, enumMapCellCode code);
 	void setCode(enumMapCellCode _code);
+	void setParent(CCNode *pNode);
 
 private:
 	void refleshSprite();
 };
-
-void MapCell::setCode(enumMapCellCode _code) {
-	this->code = _code;
-	refleshSprite();
-}
-
-void MapCell::refleshSprite() {
-	switch (code) {
-	case kNull:
-		primarySprite = NULL;
-		break;
-	case kNormal:
-		primarySprite = NULL; // TODO: 
-		break;
-	default:
-		primarySprite = NULL;
-		break;
-	}
-}

@@ -14,45 +14,28 @@ using namespace std;
 /************************************************************************/
 class Stage :
 	public StageTools {
+private:
+	Stage();
+	virtual ~Stage();
+	static Stage * s_Stage;
+	bool init();
+public:
+	static Stage * GetInstance();
 	//////////////////////////////////////////////////////////////////////////
 	// StageTools
 public:
 	CCSize getMapGridSize() { return m_MapGridSize; }
+	CCSize getCellSize() { return m_CellSize; }
 	vector<MapCell>& getMap() { return m_Map; }
 	//////////////////////////////////////////////////////////////////////////
 public:
-	Stage();
-	~Stage();
-	CCSize m_MapGridSize; // 障碍地图的格子大小;
+	CCSize m_MapGridSize; // 障碍地图的格子數目;
+	CCSize m_CellSize;
 	vector<MapCell> m_Map; // 地图;
 
+	CCNode * m_mother;
+	void setMother(CCNode * mother);
 	void resetMap();
 private:
 
 };
-
-
-Stage::Stage():
-m_MapGridSize() 
-{}
-
-Stage::~Stage() {
-}
-
-void Stage::resetMap() {
-
-	//////////////////////////////////////////////////////////////////////////
-	// width = 40 * 32 = 1280
-	// height = 40 * 20 = 800
-
-	m_MapGridSize = CCPointMake(32, 20);
-	for (int y = 0; y < int(m_MapGridSize.height); y++) {
-		for (int x = 0; x < int(m_MapGridSize.width); x++) {
-			MapCell mc;
-			mc.code = kNull;
-			mc.loc = CCPointMake(x, y);
-			mc.primarySprite = NULL;
-		}
-	}
-}
-

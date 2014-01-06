@@ -1,5 +1,6 @@
 #include "MapCreateScene.h"
-
+#include "GameLayer.h"
+#include "Stage.h"
 USING_NS_CC;
 
 CCScene* MapCreate::scene()
@@ -65,17 +66,21 @@ bool MapCreate::init()
     this->addChild(pLabel, 1);
 
     //// add "MapCreate" splash screen"
-    //CCSprite* pSprite = CCSprite::create("HelloWorld.png");
+    //CCSprite* pSprite = CCSprite::createWithSpriteFrameName("images/art_design_11.png");
 
     //// position the sprite on the center of the screen
     //pSprite->setPosition(ccp(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
     //// add the sprite as a child to this layer
-    //this->addChild(pSprite, 0);
+    //this->addChild(pSprite, 200, 2);
     
-	CCLayerColor * pLayerColor_bg = CCLayerColor::create(ccc4(61,62,113,255), 1280, 800);
-	pLayerColor_bg -> setPositionY(50);
-	this->addChild(pLayerColor_bg, 100, 1);
+	GameLayer * gameLayer = GameLayer::create();
+	gameLayer -> setPositionY(50);
+	this -> addChild(gameLayer, 100, 1);
+
+	Stage::GetInstance() -> setMother(gameLayer);
+	Stage::GetInstance() -> resetMap();
+
     return true;
 }
 

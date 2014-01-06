@@ -7,9 +7,22 @@ USING_NS_CC;
 USING_NS_CC_EXT;
 using namespace std;
 
+
+//////////////////////////////////////////////////////////////////////////
+// tag int
+// 4 3 2 | LT T RT
+// 5 0 1 |  L C R
+// 6 7 8 | LB B RB
+enum enumAnchorType {
+	kC = 0, kR = 1, kRT = 2, kT = 3,
+	kLT = 4, kL = 5, kLB = 6, kB = 7,
+	kRB = 8
+};
+
 class StageTools {
 public:
 	virtual CCSize getMapGridSize() = 0;
+	virtual CCSize getCellSize() = 0;
 	virtual vector<MapCell>& getMap() = 0;
 public:
 	bool isInScope(int idx) { return idx >= 0 || idx < getMap().size(); };
@@ -21,28 +34,9 @@ public:
 	int loc2idx(CCPoint loc);
 	MapCell& cell(int idx);
 	MapCell& cell(CCPoint loc);
+
+	CCPoint idx2pos(int idx, enumAnchorType at = kC);
+	CCPoint loc2pos(CCPoint loc, enumAnchorType at = kC);
+
+	CCPoint AncharDiff(enumAnchorType at);
 };
-
-CCPoint StageTools::idx2loc(int idx) {
-	CCAssert(isInScope(idx), "idx out of bound.");
-	CCPoint point;
-	point.x = idx % int(getMapGridSize().width);
-	point.y = idx / int(getMapGridSize().width);
-	return point;
-}
-
-int StageTools::loc2idx(CCPoint loc) {
-	CCAssert(isInScope(loc), "loc out of bound.");
-	int idx = int(getMapGridSize().width) * int(loc.y) + int(loc.x);
-	return idx;
-}
-
-MapCell& StageTools::cell(int idx) {
-	CCAssert(isInScope(idx), "out of bound.");
-	return getMap().at(idx);
-}
-
-MapCell& StageTools::cell(CCPoint loc) {
-	int idx = loc2idx(loc);
-	return getMap().at(idx);
-}
