@@ -17,6 +17,9 @@ public:
     
     // implement the "static node()" method manually
     CREATE_FUNC(MapCreate);
+
+public:
+	CCLayer * getGameLayer();
 };
 
 #endif // __MAPCREATE_SCENE_H__

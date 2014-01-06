@@ -73,6 +73,9 @@ bool MapCreate::init()
     //// add the sprite as a child to this layer
     //this->addChild(pSprite, 0);
     
+	CCLayerColor * pLayerColor_bg = CCLayerColor::create(ccc4(61,62,113,255), 1280, 800);
+	pLayerColor_bg -> setPositionY(50);
+	this->addChild(pLayerColor_bg, 100, 1);
     return true;
 }
 
@@ -87,4 +90,9 @@ void MapCreate::menuCloseCallback(CCObject* pSender)
     exit(0);
 #endif
 #endif
+}
+
+
+CCLayer * MapCreate::getGameLayer() {
+	return dynamic_cast<CCLayer *>(getChildByTag(1));
 }
