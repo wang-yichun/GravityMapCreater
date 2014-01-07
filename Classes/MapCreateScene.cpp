@@ -80,6 +80,7 @@ bool MapCreate::init()
 
 	Stage::GetInstance() -> setMother(gameLayer);
 	Stage::GetInstance() -> resetMap();
+	Stage::GetInstance() -> refleshCellShow_adv();
 
     return true;
 }

@@ -148,7 +148,7 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>gravity-folder</filename>
+            <filename>C:/Users/Administrator/Desktop/gravity-folder</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
