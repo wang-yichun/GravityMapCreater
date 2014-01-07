@@ -45,9 +45,102 @@ void MapCell::refleshSprite_adv(char * param) {
 		if (s3 == "1000" || s3 == "0100" || s3 == "0010" || s3 == "0001" || s3 == "1010" || s3 == "0101") {
 			s3 = "0000";
 		}
-	} else if ( s2 == "p") {
+	} else if (s2 == "p") {
 		if (s3 == "1110" || s3 == "0111" || s3 == "1011" || s3 == "1101" || s3 == "1010" || s3 == "0101") {
 			s3 = "1111";
+		}
+		if (s3 == "0000") {
+			if (param[5] == '1' && param[6] == '1' && param[7] == '1' && param[8] == '1') {
+				s3 = "1111";
+			} else if (param[5] == '0' && param[6] == '1' && param[7] == '1' && param[8] == '1') {
+				s3 = "0011";
+			} else if (param[5] == '1' && param[6] == '0' && param[7] == '1' && param[8] == '1') {
+				s3 = "1001";
+			} else if (param[5] == '1' && param[6] == '1' && param[7] == '0' && param[8] == '1') {
+				s3 = "1100";
+			} else if (param[5] == '1' && param[6] == '1' && param[7] == '1' && param[8] == '0') {
+				s3 = "0110";
+			} 
+			else if (param[5] == '1' && param[6] == '1' && param[7] == '0' && param[8] == '0') {
+				s3 = "0100";
+			} else if (param[5] == '1' && param[6] == '0' && param[7] == '1' && param[8] == '0') {
+				s3 = "00001010";
+			} else if (param[5] == '1' && param[6] == '0' && param[7] == '0' && param[8] == '1') {
+				s3 = "1000";
+			} else if (param[5] == '0' && param[6] == '1' && param[7] == '1' && param[8] == '0') {
+				s3 = "0010";
+			} else if (param[5] == '0' && param[6] == '1' && param[7] == '0' && param[8] == '1') {
+				s3 = "00000101";
+			} else if (param[5] == '0' && param[6] == '0' && param[7] == '1' && param[8] == '1') {
+				s3 = "0001";
+			} 
+			else if (param[5] == '1' && param[6] == '0' && param[7] == '0' && param[8] == '0') {
+				s3 = "00001000";
+			} else if (param[5] == '0' && param[6] == '1' && param[7] == '0' && param[8] == '0') {
+				s3 = "00000100";
+			} else if (param[5] == '0' && param[6] == '0' && param[7] == '1' && param[8] == '0') {
+				s3 = "00000010";
+			} else if (param[5] == '0' && param[6] == '0' && param[7] == '0' && param[8] == '1') {
+				s3 = "00000001";
+			} else {
+
+			}
+		} else if (s3 == "1000") {
+			if (param[6] == '1' && param[7] == '0') {
+				s3 = "1100";
+			}
+			if (param[6] == '0' && param[7] == '1') {
+				s3 = "1001";
+			}
+			if (param[6] == '1' && param[7] == '1') {
+				s3 = "1111";
+			}
+		} else if (s3 == "0100") {
+			if (param[7] == '1' && param[8] == '0') {
+				s3 = "0110";
+			}
+			if (param[7] == '0' && param[8] == '1') {
+				s3 = "1100";
+			}
+			if (param[7] == '1' && param[8] == '1') {
+				s3 = "1111";
+			}
+		} else if (s3 == "0010") {
+			if (param[5] == '1' && param[8] == '0') {
+				s3 = "0110";
+			}
+			if (param[5] == '0' && param[8] == '1') {
+				s3 = "0011";
+			}
+			if (param[5] == '1' && param[8] == '1') {
+				s3 = "1111";
+			}
+		} else if (s3 == "0001") {
+			if (param[5] == '1' && param[6] == '0') {
+				s3 = "1001";
+			}
+			if (param[5] == '0' && param[6] == '1') {
+				s3 = "0011";
+			}
+			if (param[5] == '1' && param[6] == '1') {
+				s3 = "1111";
+			}
+		} else if (s3 == "1100") {
+			if (param[7] == '1') {
+				s3 = "1111";
+			}
+		} else if (s3 == "0110") {
+			if (param[8] == '1') {
+				s3 = "1111";
+			}
+		} else if (s3 == "0011") {
+			if (param[5] == '1') {
+				s3 = "1111";
+			}
+		} else if (s3 == "1001") {
+			if (param[6] == '1') {
+				s3 = "1111";
+			}
 		}
 	}
 

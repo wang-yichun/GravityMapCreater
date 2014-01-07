@@ -33,7 +33,7 @@
             <key>images/art_design_11.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{98,277},{40,40}}</string>
+                <string>{{128,358},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +163,7 @@
             <key>mapcell/obst_n0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{176,316},{10,10}}</string>
+                <string>{{182,352},{10,10}}</string>
                 <key>offset</key>
                 <string>{-15,-15}</string>
                 <key>rotated</key>
@@ -176,7 +176,7 @@
             <key>mapcell/obst_n0110.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{164,307},{10,10}}</string>
+                <string>{{182,340},{10,10}}</string>
                 <key>offset</key>
                 <string>{-15,15}</string>
                 <key>rotated</key>
@@ -202,7 +202,7 @@
             <key>mapcell/obst_n1001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{152,307},{10,10}}</string>
+                <string>{{182,328},{10,10}}</string>
                 <key>offset</key>
                 <string>{15,-15}</string>
                 <key>rotated</key>
@@ -228,7 +228,7 @@
             <key>mapcell/obst_n1100.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{140,307},{10,10}}</string>
+                <string>{{182,316},{10,10}}</string>
                 <key>offset</key>
                 <string>{15,15}</string>
                 <key>rotated</key>
@@ -267,7 +267,7 @@
             <key>mapcell/obst_n1111.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{44,275},{40,40}}</string>
+                <string>{{86,319},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -280,7 +280,85 @@
             <key>mapcell/obst_p0000.png</key>
             <dict>
                 <key>frame</key>
+                <string>{{128,358},{40,40}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{40,40}}</string>
+                <key>sourceSize</key>
+                <string>{40,40}</string>
+            </dict>
+            <key>mapcell/obst_p00000001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{44,317},{40,40}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{40,40}}</string>
+                <key>sourceSize</key>
+                <string>{40,40}</string>
+            </dict>
+            <key>mapcell/obst_p00000010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,317},{40,40}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{40,40}}</string>
+                <key>sourceSize</key>
+                <string>{40,40}</string>
+            </dict>
+            <key>mapcell/obst_p00000100.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{194,338},{40,40}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{40,40}}</string>
+                <key>sourceSize</key>
+                <string>{40,40}</string>
+            </dict>
+            <key>mapcell/obst_p00000101.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{140,316},{40,40}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{40,40}}</string>
+                <key>sourceSize</key>
+                <string>{40,40}</string>
+            </dict>
+            <key>mapcell/obst_p00001000.png</key>
+            <dict>
+                <key>frame</key>
                 <string>{{98,277},{40,40}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{40,40}}</string>
+                <key>sourceSize</key>
+                <string>{40,40}</string>
+            </dict>
+            <key>mapcell/obst_p00001010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{44,275},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -417,7 +495,7 @@
             <key>size</key>
             <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c8dcd0c2ac7c75076a653acd3e490fac:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:70689daa1a19bcc4041d1f7f06243d05:1/1$</string>
             <key>textureFileName</key>
             <string>gravity-folder.png</string>
         </dict>
