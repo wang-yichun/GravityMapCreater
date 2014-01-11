@@ -51,7 +51,7 @@
           "tag": 2,
           "touchAble": true,
           "useMergedTexture": false,
-          "visible": true,
+          "visible": false,
           "width": 82,
           "x": 640,
           "y": 452,
@@ -123,7 +123,7 @@
           "tag": 6,
           "touchAble": false,
           "useMergedTexture": false,
-          "visible": true,
+          "visible": false,
           "width": 395,
           "x": 640,
           "y": 380,
@@ -179,7 +179,7 @@
           "capInsetsY": 0,
           "disabled": null,
           "disabledData": {
-            "path": null,
+            "path": "map_creater/button_disabled.png",
             "plistFile": null,
             "resourceType": 0
           },
@@ -188,13 +188,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "C:\\Program Files (x86)\\CocoStudio\\EditorDefaultRes\\GUI/button.png",
+            "path": "map_creater/button.png",
             "plistFile": null,
-            "resourceType": 2
+            "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": null,
+            "path": "map_creater/button_pressed.png",
             "plistFile": null,
             "resourceType": 0
           },
@@ -251,7 +251,7 @@
           "capInsetsY": 0,
           "disabled": null,
           "disabledData": {
-            "path": null,
+            "path": "map_creater/button_disabled.png",
             "plistFile": null,
             "resourceType": 0
           },
@@ -260,13 +260,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "C:\\Program Files (x86)\\CocoStudio\\EditorDefaultRes\\GUI/button.png",
+            "path": "map_creater/button.png",
             "plistFile": null,
-            "resourceType": 2
+            "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": null,
+            "path": "map_creater/button_pressed.png",
             "plistFile": null,
             "resourceType": 0
           },
@@ -283,7 +283,7 @@
     "options": {
       "__type": "ComGUIPanelSurrogate:#EditorCommon.JsonModel.Component.GUI",
       "classname": "Panel",
-      "name": "Panel_20",
+      "name": "root",
       "ZOrder": 0,
       "actiontag": -1,
       "anchorPointX": 0,

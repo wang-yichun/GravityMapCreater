@@ -158,7 +158,7 @@
           "layoutParameter": null,
           "opacity": 255,
           "positionPercentX": 0.456968,
-          "positionPercentY": 0.03456757,
+          "positionPercentY": 0.02942606,
           "positionType": 0,
           "rotation": 0,
           "scaleX": 1,
@@ -172,31 +172,31 @@
           "visible": true,
           "width": 103,
           "x": 584,
-          "y": 27,
+          "y": 23,
           "capInsetsHeight": 0,
           "capInsetsWidth": 0,
           "capInsetsX": 0,
           "capInsetsY": 0,
           "disabled": null,
           "disabledData": {
-            "path": null,
+            "path": "map_creater/button_disabled.png",
             "plistFile": null,
-            "resourceType": 0
+            "resourceType": 1
           },
           "fontName": "微软雅黑",
           "fontSize": 14,
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "C:/Program Files (x86)/CocoStudio/EditorDefaultRes/GUI/button.png",
+            "path": "map_creater/button.png",
             "plistFile": null,
             "resourceType": 1
           },
           "pressed": null,
           "pressedData": {
-            "path": null,
+            "path": "map_creater/button_pressed.png",
             "plistFile": null,
-            "resourceType": 0
+            "resourceType": 1
           },
           "scale9Enable": false,
           "scale9Height": 40,
@@ -230,7 +230,7 @@
           "layoutParameter": null,
           "opacity": 255,
           "positionPercentX": 0.5439816,
-          "positionPercentY": 0.0345675722,
+          "positionPercentY": 0.0294260625,
           "positionType": 0,
           "rotation": 0,
           "scaleX": 1,
@@ -244,31 +244,31 @@
           "visible": true,
           "width": 103,
           "x": 696,
-          "y": 27,
+          "y": 23,
           "capInsetsHeight": 0,
           "capInsetsWidth": 0,
           "capInsetsX": 0,
           "capInsetsY": 0,
           "disabled": null,
           "disabledData": {
-            "path": null,
+            "path": "map_creater/button_disabled.png",
             "plistFile": null,
-            "resourceType": 0
+            "resourceType": 1
           },
           "fontName": "微软雅黑",
           "fontSize": 14,
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "C:/Program Files (x86)/CocoStudio/EditorDefaultRes/GUI/button.png",
+            "path": "map_creater/button.png",
             "plistFile": null,
             "resourceType": 1
           },
           "pressed": null,
           "pressedData": {
-            "path": null,
+            "path": "map_creater/button_pressed.png",
             "plistFile": null,
-            "resourceType": 0
+            "resourceType": 1
           },
           "scale9Enable": false,
           "scale9Height": 40,

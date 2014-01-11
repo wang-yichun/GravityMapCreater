@@ -179,7 +179,7 @@
           "capInsetsY": 0,
           "disabled": null,
           "disabledData": {
-            "path": null,
+            "path": "map_creater/button_disabled.png",
             "plistFile": null,
             "resourceType": 0
           },
@@ -188,13 +188,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "C:\\Program Files (x86)\\CocoStudio\\EditorDefaultRes\\GUI/button.png",
+            "path": "map_creater/button.png",
             "plistFile": null,
-            "resourceType": 2
+            "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": null,
+            "path": "map_creater/button_pressed.png",
             "plistFile": null,
             "resourceType": 0
           },
@@ -251,7 +251,7 @@
           "capInsetsY": 0,
           "disabled": null,
           "disabledData": {
-            "path": null,
+            "path": "map_creater/button_disabled.png",
             "plistFile": null,
             "resourceType": 0
           },
@@ -260,13 +260,13 @@
           "fontType": 0,
           "normal": null,
           "normalData": {
-            "path": "C:\\Program Files (x86)\\CocoStudio\\EditorDefaultRes\\GUI/button.png",
+            "path": "map_creater/button.png",
             "plistFile": null,
-            "resourceType": 2
+            "resourceType": 0
           },
           "pressed": null,
           "pressedData": {
-            "path": null,
+            "path": "map_creater/button_pressed.png",
             "plistFile": null,
             "resourceType": 0
           },

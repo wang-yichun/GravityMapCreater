@@ -24,8 +24,13 @@
     <ClCompile Include="..\Classes\MapCreateScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\MapCell.cpp" />
     <ClCompile Include="..\Classes\StageTools.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SystemManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapCell.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -52,6 +57,9 @@
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\GameLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SystemManager.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>

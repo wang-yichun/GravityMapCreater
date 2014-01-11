@@ -1,4 +1,4 @@
-﻿生成启动时间为 2014/1/11 23:35:30。
+﻿生成启动时间为 2014/1/12 2:01:07。
      1>项目“D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\GravityMapCreater.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\win32" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\CocosDenshion\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\extensions" /I..\Classes /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\MapCreateScene.cpp
@@ -17,15 +17,17 @@
          Debug.win32\MapCreateScene.obj
          Debug.win32\Stage.obj
          Debug.win32\StageTools.obj
+         Debug.win32\SystemManager.obj
          Debug.win32\main.obj
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libcocos2d.lib"
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libCocosDenshion.lib"
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libExtensions.lib"
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libBox2D.lib"
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libchipmunk.lib"
+     1>AppDelegate.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
          GravityMapCreater.vcxproj -> D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\GravityMapCreater.exe
      1>已完成生成项目“D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\GravityMapCreater.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:07.57
+已用时间 00:00:07.06
