@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <filePath>D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\ext\CSProj\CSProj.xml.ui</filePath>
+  <Version>1.2.0.0</Version>
+  <Name>CSProj</Name>
+  <ProjectDir>D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\ext\CSProj</ProjectDir>
+  <JsonFileName>CSProj.json</JsonFileName>
+  <Resources>D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\ext\CSProj\Resources</Resources>
+  <JsonFolder>D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\ext\CSProj\Json</JsonFolder>
+  <JsonList>
+    <string>splash_screen.json</string>
+  </JsonList>
+  <imageFileList>
+    <string>CSProj0.plist</string>
+  </imageFileList>
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson>splash_screen.json</CurrentUIJson>
+  <CanvasSize>
+    <Width>1280</Width>
+    <Height>800</Height>
+  </CanvasSize>
+</UIProject>

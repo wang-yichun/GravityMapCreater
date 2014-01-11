@@ -24,7 +24,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 	// init sprite frame cache
-	CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gravity-folder.plist");
+	//CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("gravity-folder.plist");
 
     // create a scene. it's an autorelease object
     CCScene *pScene = MapCreate::scene();

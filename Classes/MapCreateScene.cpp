@@ -73,7 +73,19 @@ bool MapCreate::init()
 
     //// add the sprite as a child to this layer
     //this->addChild(pSprite, 200, 2);
-    
+
+	// 
+	UILayer * uiLayer = UILayer::create();
+	UIWidget * uiWidget = GUIReader::shareReader()->widgetFromJsonFile("CSProj/splash_screen.ExportJson");
+	UIButton * btn = dynamic_cast<UIButton *>(uiWidget -> getChildByName("Panel_20") -> getChildByName("Button_28"));
+	btn -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+	uiLayer -> addWidget(uiWidget);
+	this -> addChild(uiLayer, 200, 2);
+
+	//ActionObject * ao = ActionManager::shareManager() -> getActionByName("splash_screen.ExportJson", "Animation0");
+	//ao -> play();
+
 	GameLayer * gameLayer = GameLayer::create();
 	gameLayer -> setPositionY(50);
 	this -> addChild(gameLayer, 100, 1);
@@ -81,7 +93,6 @@ bool MapCreate::init()
 	Stage::GetInstance() -> setMother(gameLayer);
 	Stage::GetInstance() -> resetMap();
 	Stage::GetInstance() -> refleshCellShow_adv();
-
     return true;
 }
 
@@ -101,4 +112,12 @@ void MapCreate::menuCloseCallback(CCObject* pSender)
 
 CCLayer * MapCreate::getGameLayer() {
 	return dynamic_cast<CCLayer *>(getChildByTag(1));
+}
+
+void MapCreate::touchBeganEvent(CCObject *pSender) {
+	CCLOG("touchBeganEvent");
+}
+
+void MapCreate::touchEndEvent(CCObject *pSender) {
+	CCLOG("touchEndEvent");
 }

@@ -2,6 +2,7 @@
 #define __MAPCREATE_SCENE_H__
 
 #include "cocos2d.h"
+#include "cocos-ext.h"
 
 class MapCreate : public cocos2d::CCLayer
 {
@@ -20,6 +21,9 @@ public:
 
 public:
 	CCLayer * getGameLayer();
+
+	void touchBeganEvent(CCObject *pSender);
+	void touchEndEvent(CCObject *pSender);
 };
 
 #endif // __MAPCREATE_SCENE_H__
