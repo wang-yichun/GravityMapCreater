@@ -2,6 +2,7 @@
 #include "GameLayer.h"
 #include "Stage.h"
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 CCScene* MapCreate::scene()
 {
@@ -76,10 +77,15 @@ bool MapCreate::init()
 
 	// 
 	UILayer * uiLayer = UILayer::create();
-	UIWidget * uiWidget = GUIReader::shareReader()->widgetFromJsonFile("CSProj/splash_screen.ExportJson");
-	UIButton * btn = dynamic_cast<UIButton *>(uiWidget -> getChildByName("Panel_20") -> getChildByName("Button_28"));
-	btn -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
-	btn -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+	
+	UIWidget * uiWidget = GUIReader::shareReader()->widgetFromJsonFile("CSProj/map_create_widget.ExportJson");
+	UIButton * btn_cell_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_null"));
+	btn_cell_null -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn_cell_null -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+	UIButton * btn_cell_normal = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_normal"));
+	btn_cell_normal -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn_cell_normal -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+	
 	uiLayer -> addWidget(uiWidget);
 	this -> addChild(uiLayer, 200, 2);
 
@@ -115,9 +121,12 @@ CCLayer * MapCreate::getGameLayer() {
 }
 
 void MapCreate::touchBeganEvent(CCObject *pSender) {
-	CCLOG("touchBeganEvent");
+	UIButton * btn = dynamic_cast<UIButton *>(pSender);
+	CCLOG("touchBeganEvent arg:%s", btn->getName());
+
 }
 
 void MapCreate::touchEndEvent(CCObject *pSender) {
-	CCLOG("touchEndEvent");
+	UIButton * btn = dynamic_cast<UIButton *>(pSender);
+	CCLOG("touchEndEvent arg:%s", btn->getName());
 }

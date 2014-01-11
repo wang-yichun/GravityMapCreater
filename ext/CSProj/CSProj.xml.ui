@@ -8,13 +8,13 @@
   <Resources>D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\ext\CSProj\Resources</Resources>
   <JsonFolder>D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\ext\CSProj\Json</JsonFolder>
   <JsonList>
-    <string>splash_screen.json</string>
+    <string>map_create_widget.json</string>
   </JsonList>
   <imageFileList>
     <string>CSProj0.plist</string>
   </imageFileList>
   <JsonSuffix>.json</JsonSuffix>
-  <CurrentUIJson>splash_screen.json</CurrentUIJson>
+  <CurrentUIJson>map_create_widget.json</CurrentUIJson>
   <CanvasSize>
     <Width>1280</Width>
     <Height>800</Height>
