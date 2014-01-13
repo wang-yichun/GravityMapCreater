@@ -707,14 +707,14 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>map_creater/button.png</key>
+			<key>mapobj/landing_point.png</key>
 			<dict>
 				<key>width</key>
-				<integer>103</integer>
+				<integer>80</integer>
 				<key>height</key>
 				<integer>40</integer>
 				<key>originalWidth</key>
-				<integer>103</integer>
+				<integer>80</integer>
 				<key>originalHeight</key>
 				<integer>40</integer>
 				<key>x</key>
@@ -726,7 +726,7 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>map_creater/button_disabled.png</key>
+			<key>map_creater/button.png</key>
 			<dict>
 				<key>width</key>
 				<integer>103</integer>
@@ -745,7 +745,7 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>map_creater/button_pressed.png</key>
+			<key>map_creater/button_disabled.png</key>
 			<dict>
 				<key>width</key>
 				<integer>103</integer>
@@ -757,6 +757,25 @@
 				<integer>40</integer>
 				<key>x</key>
 				<integer>105</integer>
+				<key>y</key>
+				<integer>144</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>map_creater/button_pressed.png</key>
+			<dict>
+				<key>width</key>
+				<integer>103</integer>
+				<key>height</key>
+				<integer>40</integer>
+				<key>originalWidth</key>
+				<integer>103</integer>
+				<key>originalHeight</key>
+				<integer>40</integer>
+				<key>x</key>
+				<integer>210</integer>
 				<key>y</key>
 				<integer>144</integer>
 				<key>offsetX</key>

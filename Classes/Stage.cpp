@@ -51,9 +51,11 @@ void Stage::resetMap() {
 				CCPoint pos = loc2pos(CCPointMake(x,y));
 				//CCLOG( "(%d,%d) - (%f,%f)", x ,y , pos.x, pos.y );
 				mc.primaryNode -> setPosition(pos);
+				mc.secondaryNode -> setPosition(pos);
 				m_mother -> addChild(mc.primaryNode, 100);
+				m_mother -> addChild(mc.secondaryNode, 110);
 				mc.infoTTF -> setPosition(pos);
-//				m_mother -> addChild(mc.infoTTF, 110);
+				m_mother -> addChild(mc.infoTTF, 200);
 			}
 		}
 	}
@@ -117,7 +119,7 @@ void Stage::refleshCellShow_adv(CCPoint loc) {
 	char param[9];
 	memset(param, 0, sizeof(param));
 	for (int i = 0; i < 9; i++) {
-		if (mapCell[i].code == kNull) {
+		if (MapCell::GetCellCodeIsNullShow(mapCell[i].code)) { // ÕÏ°­ÏÔÊ¾Âë;
 			param[i] = '0';
 		} else {
 			param[i] = '1';
