@@ -21,8 +21,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
  
     pEGLView -> setDesignResolutionSize(1280, 900, kResolutionShowAll); // UPTO MEIZU MXII STD.
     
+    // config director - fix black-line
+//    CCDirector::sharedDirector() -> setProjection(kCCDirectorProjection2D);
+
+// fix black-line, need to find these lines:
+//#ifndef CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL
+//#define CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL 1
+//#endif
+    
     // turn on display FPS
-    pDirector->setDisplayStats(false);
+    pDirector->setDisplayStats(true);
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 	// init sprite frame cache

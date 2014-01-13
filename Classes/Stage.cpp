@@ -53,7 +53,7 @@ void Stage::resetMap() {
 				mc.primaryNode -> setPosition(pos);
 				m_mother -> addChild(mc.primaryNode, 100);
 				mc.infoTTF -> setPosition(pos);
-				m_mother -> addChild(mc.infoTTF, 110);
+//				m_mother -> addChild(mc.infoTTF, 110);
 			}
 		}
 	}
