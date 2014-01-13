@@ -133,9 +133,9 @@ void MapCreate::touchBeganEvent(CCObject *pSender) {
 	if (btn -> isBright()) {
 		CCLOG("touchBeganEvent arg:%s", btn->getName());
 		if (string(btn->getName()) == "btn_cell_null") {
-			SystemManager::GetInstance() -> m_chosedCellCode = kNull;
+			SystemManager::GetInstance() -> m_chosedCellCode = kNull; // record btn status.
 		} else if (string(btn->getName()) == "btn_cell_normal") {
-			SystemManager::GetInstance() -> m_chosedCellCode = kNormal;
+			SystemManager::GetInstance() -> m_chosedCellCode = kNormal; // record ..
 		}
 	} else {
 		CCLOG("touchBeganEvent arg:%s (not Bright)", btn->getName());

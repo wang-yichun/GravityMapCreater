@@ -35,6 +35,20 @@ CCPoint StageTools::loc2pos(CCPoint loc, enumAnchorType at) {
 	return pos;
 }
 
+CCPoint StageTools::pos2loc(CCPoint pos) {
+	CCSize cell_size = this->getCellSize();
+	CCPoint loc = ccp(floorf(pos.x / cell_size.width), floorf(pos.y / cell_size.height));
+	CCAssert(isInScope(loc), "pos out of bound.");
+	return loc;
+}
+
+int StageTools::pos2idx(CCPoint pos) {
+	CCSize cell_size = this->getCellSize();
+	CCPoint loc = ccp(floorf(pos.x / cell_size.width), floorf(pos.y / cell_size.height));
+	CCAssert(isInScope(loc), "pos out of bound.");
+	return loc2idx(loc);
+}
+
 CCPoint StageTools::AncharDiff(enumAnchorType at) {
 	CCPoint p;
 	CCSize cs = getCellSize();

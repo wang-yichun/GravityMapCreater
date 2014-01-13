@@ -35,8 +35,11 @@ public:
 	MapCell& cell(int idx);
 	MapCell& cell(CCPoint loc);
 
-	CCPoint idx2pos(int idx, enumAnchorType at = kC);
+	CCPoint idx2pos(int idx, enumAnchorType at = kC); // 格子坐标转换屏幕坐标，第二参数为相对锚点位位置;
 	CCPoint loc2pos(CCPoint loc, enumAnchorType at = kC);
+
+	CCPoint pos2loc(CCPoint pos); // 屏幕坐标 -> 格子坐标;
+	int pos2idx(CCPoint pos);
 
 	CCPoint AncharDiff(enumAnchorType at);
 };
