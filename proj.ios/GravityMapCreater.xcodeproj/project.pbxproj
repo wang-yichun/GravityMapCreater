@@ -174,10 +174,10 @@
 		32B1E7521883BDB800E555F5 /* MapCreateScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E74B1883BDB800E555F5 /* MapCreateScene.cpp */; };
 		32B1E7531883BDB800E555F5 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E74D1883BDB800E555F5 /* Stage.cpp */; };
 		32B1E7541883BDB800E555F5 /* StageTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E74F1883BDB800E555F5 /* StageTools.cpp */; };
-		32B1E75A1883BDFB00E555F5 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7561883BDFB00E555F5 /* arial.ttf */; };
-		32B1E75B1883BDFB00E555F5 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7571883BDFB00E555F5 /* Marker Felt.ttf */; };
-		32B1E75C1883BDFB00E555F5 /* gravity-folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7581883BDFB00E555F5 /* gravity-folder.png */; };
-		32B1E75D1883BDFB00E555F5 /* gravity-folder.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7591883BDFB00E555F5 /* gravity-folder.plist */; };
+		32B1E76F1883BF9300E555F5 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7681883BF9300E555F5 /* arial.ttf */; };
+		32B1E7701883BF9300E555F5 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7691883BF9300E555F5 /* Marker Felt.ttf */; };
+		32B1E7731883BFA800E555F5 /* SystemManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E7711883BFA800E555F5 /* SystemManager.cpp */; };
+		32B1E7751883C04700E555F5 /* CSProj in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7741883C04700E555F5 /* CSProj */; };
 		379BB99517F03F3700829B88 /* CCActionFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB8FC17F03F3700829B88 /* CCActionFrame.cpp */; };
 		379BB99617F03F3700829B88 /* CCActionFrameEasing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB8FE17F03F3700829B88 /* CCActionFrameEasing.cpp */; };
 		379BB99717F03F3700829B88 /* CCActionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB90017F03F3700829B88 /* CCActionManager.cpp */; };
@@ -613,10 +613,11 @@
 		32B1E74E1883BDB800E555F5 /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage.h; path = ../Classes/Stage.h; sourceTree = "<group>"; };
 		32B1E74F1883BDB800E555F5 /* StageTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StageTools.cpp; path = ../Classes/StageTools.cpp; sourceTree = "<group>"; };
 		32B1E7501883BDB800E555F5 /* StageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StageTools.h; path = ../Classes/StageTools.h; sourceTree = "<group>"; };
-		32B1E7561883BDFB00E555F5 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
-		32B1E7571883BDFB00E555F5 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
-		32B1E7581883BDFB00E555F5 /* gravity-folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gravity-folder.png"; sourceTree = "<group>"; };
-		32B1E7591883BDFB00E555F5 /* gravity-folder.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "gravity-folder.plist"; sourceTree = "<group>"; };
+		32B1E7681883BF9300E555F5 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
+		32B1E7691883BF9300E555F5 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
+		32B1E7711883BFA800E555F5 /* SystemManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SystemManager.cpp; path = ../Classes/SystemManager.cpp; sourceTree = "<group>"; };
+		32B1E7721883BFA800E555F5 /* SystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemManager.h; path = ../Classes/SystemManager.h; sourceTree = "<group>"; };
+		32B1E7741883C04700E555F5 /* CSProj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CSProj; sourceTree = "<group>"; };
 		379BB8FC17F03F3700829B88 /* CCActionFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionFrame.cpp; sourceTree = "<group>"; };
 		379BB8FD17F03F3700829B88 /* CCActionFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionFrame.h; sourceTree = "<group>"; };
 		379BB8FE17F03F3700829B88 /* CCActionFrameEasing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionFrameEasing.cpp; sourceTree = "<group>"; };
@@ -1282,6 +1283,8 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				32B1E7711883BFA800E555F5 /* SystemManager.cpp */,
+				32B1E7721883BFA800E555F5 /* SystemManager.h */,
 				32B1E7481883BDB800E555F5 /* GameLayer.h */,
 				32B1E7491883BDB800E555F5 /* MapCell.cpp */,
 				32B1E74A1883BDB800E555F5 /* MapCell.h */,
@@ -1437,11 +1440,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		32B1E7551883BDFB00E555F5 /* fonts */ = {
+		32B1E7671883BF9300E555F5 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				32B1E7561883BDFB00E555F5 /* arial.ttf */,
-				32B1E7571883BDFB00E555F5 /* Marker Felt.ttf */,
+				32B1E7681883BF9300E555F5 /* arial.ttf */,
+				32B1E7691883BF9300E555F5 /* Marker Felt.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -1748,9 +1751,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				32B1E7551883BDFB00E555F5 /* fonts */,
-				32B1E7581883BDFB00E555F5 /* gravity-folder.png */,
-				32B1E7591883BDFB00E555F5 /* gravity-folder.plist */,
+				32B1E7741883C04700E555F5 /* CSProj */,
+				32B1E7671883BF9300E555F5 /* fonts */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -1841,19 +1843,18 @@
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
-				32B1E75D1883BDFB00E555F5 /* gravity-folder.plist in Resources */,
-				32B1E75C1883BDFB00E555F5 /* gravity-folder.png in Resources */,
+				32B1E76F1883BF9300E555F5 /* arial.ttf in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
+				32B1E7751883C04700E555F5 /* CSProj in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				379BB9CC17F03F3700829B88 /* json_internalarray.inl in Resources */,
+				32B1E7701883BF9300E555F5 /* Marker Felt.ttf in Resources */,
 				379BB9CD17F03F3700829B88 /* json_internalmap.inl in Resources */,
 				379BB9D017F03F3700829B88 /* json_valueiterator.inl in Resources */,
-				32B1E75A1883BDFB00E555F5 /* arial.ttf in Resources */,
 				379BB9D217F03F3700829B88 /* sconscript in Resources */,
-				32B1E75B1883BDFB00E555F5 /* Marker Felt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1904,6 +1905,7 @@
 				15A3D9231682F7D5002FB0C5 /* b2Joint.cpp in Sources */,
 				15A3D9241682F7D5002FB0C5 /* b2MouseJoint.cpp in Sources */,
 				15A3D9251682F7D5002FB0C5 /* b2PrismaticJoint.cpp in Sources */,
+				32B1E7731883BFA800E555F5 /* SystemManager.cpp in Sources */,
 				15A3D9261682F7D5002FB0C5 /* b2PulleyJoint.cpp in Sources */,
 				15A3D9271682F7D5002FB0C5 /* b2RevoluteJoint.cpp in Sources */,
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,

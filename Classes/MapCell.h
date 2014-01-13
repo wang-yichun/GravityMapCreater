@@ -12,7 +12,7 @@ enum enumMapCellCode {
 };
 
 /************************************************************************/
-/* µØÍ¼µ¥Ôª¸ñ×Ó;
+/* åœ°å›¾å•å…ƒæ ¼å­;
 /************************************************************************/
 class MapCell {
 public:
@@ -20,12 +20,12 @@ public:
 	MapCell(CCPoint loc, enumMapCellCode code);
 	~MapCell();
 
-	CCPoint loc; // ·½¸ñ×ø±ê;
-	enumMapCellCode code; // ±àºÅ;
-	CCNode * primaryNode; // Ö÷½Úµã;
-	CCSprite * primarySprite; // Ö÷ÏÔÊ¾¾«Áé;
-	CCLabelTTF * infoTTF; // œyÔ‡;
-	CCNode * parent; // ËŞÖ÷;
+	CCPoint loc; // æ–¹æ ¼åæ ‡;
+	enumMapCellCode code; // ç¼–å·;
+	CCNode * primaryNode; // ä¸»èŠ‚ç‚¹;
+	CCSprite * primarySprite; // ä¸»æ˜¾ç¤ºç²¾çµ;
+	CCLabelTTF * infoTTF; // æ¸¬è©¦;
+	CCNode * parent; // å®¿ä¸»;
 
 	void setMapCell(CCPoint loc, enumMapCellCode code);
 	void setCode(enumMapCellCode _code);
@@ -33,5 +33,5 @@ public:
 	void refleshSprite_adv(char * param);
 
 private:
-	void refleshSprite(); // ´Ë´¦µÄspriteÏÔÊ¾ÓëÖÜÎ§ÎŞ¹Ø;
+	void refleshSprite(); // æ­¤å¤„çš„spriteæ˜¾ç¤ºä¸å‘¨å›´æ— å…³;
 };

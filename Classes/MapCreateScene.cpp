@@ -81,7 +81,7 @@ bool MapCreate::init()
 
 	// 
 	UILayer * uiLayer = UILayer::create();
-	
+    
 	uiWidget = GUIReader::shareReader()->widgetFromJsonFile("CSProj/map_create_widget.ExportJson");
 	UIButton * btn_cell_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_null"));
 	btn_cell_null -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
