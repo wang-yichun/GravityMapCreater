@@ -1,7 +1,7 @@
 #include "MapCell.h"
 
 
-MapCell::MapCell(): primarySprite(NULL), parent(NULL), infoTTF(NULL) {}
+MapCell::MapCell(): primaryNode(NULL), primarySprite(NULL), parent(NULL), infoTTF(NULL) {}
 MapCell::~MapCell() {}
 
 void MapCell::setMapCell(CCPoint loc, enumMapCellCode code) {
@@ -16,7 +16,7 @@ void MapCell::setMapCell(CCPoint loc, enumMapCellCode code) {
 		this -> infoTTF -> setColor(ccc3(255,0,0));
 	}
 
-	if ( this -> primaryNode != NULL) {
+	if ( this -> primaryNode == NULL) {
 		this -> primaryNode = CCNode::create();
 	}
 

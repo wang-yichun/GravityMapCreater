@@ -1,7 +1,12 @@
 #include "MapCreateScene.h"
 #include "GameLayer.h"
 #include "Stage.h"
-USING_NS_CC;
+#include "SystemManager.h"
+
+MapCreate::MapCreate():
+	uiWidget(NULL) { }
+
+MapCreate::~MapCreate() {}
 
 CCScene* MapCreate::scene()
 {
@@ -73,7 +78,25 @@ bool MapCreate::init()
 
     //// add the sprite as a child to this layer
     //this->addChild(pSprite, 200, 2);
+
+	// 
+	UILayer * uiLayer = UILayer::create();
     
+	uiWidget = GUIReader::shareReader()->widgetFromJsonFile("CSProj/map_create_widget.ExportJson");
+	UIButton * btn_cell_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_null"));
+	btn_cell_null -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn_cell_null -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+	UIButton * btn_cell_normal = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_normal"));
+	btn_cell_normal -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn_cell_normal -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+
+	uiWidget -> setTag(1);
+	uiLayer -> addWidget(uiWidget);
+	this -> addChild(uiLayer, 200, 2);
+
+	//ActionObject * ao = ActionManager::shareManager() -> getActionByName("splash_screen.ExportJson", "Animation0");
+	//ao -> play();
+
 	GameLayer * gameLayer = GameLayer::create();
 	gameLayer -> setPositionY(50);
 	this -> addChild(gameLayer, 100, 1);
@@ -81,6 +104,8 @@ bool MapCreate::init()
 	Stage::GetInstance() -> setMother(gameLayer);
 	Stage::GetInstance() -> resetMap();
 	Stage::GetInstance() -> refleshCellShow_adv();
+
+	SystemManager::GetInstance(); // init
 
     return true;
 }
@@ -101,4 +126,55 @@ void MapCreate::menuCloseCallback(CCObject* pSender)
 
 CCLayer * MapCreate::getGameLayer() {
 	return dynamic_cast<CCLayer *>(getChildByTag(1));
+}
+
+void MapCreate::touchBeganEvent(CCObject *pSender) {
+	UIButton * btn = dynamic_cast<UIButton *>(pSender);
+	if (btn -> isBright()) {
+		CCLOG("touchBeganEvent arg:%s", btn->getName());
+		if (string(btn->getName()) == "btn_cell_null") {
+			SystemManager::GetInstance() -> m_chosedCellCode = kNull;
+		} else if (string(btn->getName()) == "btn_cell_normal") {
+			SystemManager::GetInstance() -> m_chosedCellCode = kNormal;
+		}
+	} else {
+		CCLOG("touchBeganEvent arg:%s (not Bright)", btn->getName());
+	}
+
+}
+
+void MapCreate::touchEndEvent(CCObject *pSender) {
+	UIButton * btn = dynamic_cast<UIButton *>(pSender);
+	if (btn -> isBright()) {
+		CCLOG("touchEndEvent arg:%s", btn->getName());
+	} else {
+		CCLOG("touchEndEvent arg:%s (not Bright)", btn->getName());
+	}
+	setCurrentCellCodeBtnEnabled();
+}
+
+void MapCreate::setAllCellCodeBtnEnabled(bool enabled) {
+	UIButton * btn_cell_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_null"));
+	UIButton * btn_cell_normal = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_normal"));
+
+	btn_cell_null -> setBright(enabled);
+	btn_cell_normal -> setBright(enabled);
+}
+
+void MapCreate::setCurrentCellCodeBtnEnabled() {
+	UIButton * btn_cell_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_null"));
+	UIButton * btn_cell_normal = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_normal"));
+
+	setAllCellCodeBtnEnabled(true);
+	enumMapCellCode current_chosed_cell_code = SystemManager::GetInstance() -> m_chosedCellCode;
+	switch (current_chosed_cell_code) {
+	case kNull:
+		btn_cell_null -> setBright(false);
+		break;
+	case kNormal:
+		btn_cell_normal -> setBright(false);
+		break;
+	default:
+		break;
+	}
 }
