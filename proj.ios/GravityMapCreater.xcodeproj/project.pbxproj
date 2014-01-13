@@ -170,6 +170,14 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		32B1E7511883BDB800E555F5 /* MapCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E7491883BDB800E555F5 /* MapCell.cpp */; };
+		32B1E7521883BDB800E555F5 /* MapCreateScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E74B1883BDB800E555F5 /* MapCreateScene.cpp */; };
+		32B1E7531883BDB800E555F5 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E74D1883BDB800E555F5 /* Stage.cpp */; };
+		32B1E7541883BDB800E555F5 /* StageTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E74F1883BDB800E555F5 /* StageTools.cpp */; };
+		32B1E75A1883BDFB00E555F5 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7561883BDFB00E555F5 /* arial.ttf */; };
+		32B1E75B1883BDFB00E555F5 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7571883BDFB00E555F5 /* Marker Felt.ttf */; };
+		32B1E75C1883BDFB00E555F5 /* gravity-folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7581883BDFB00E555F5 /* gravity-folder.png */; };
+		32B1E75D1883BDFB00E555F5 /* gravity-folder.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32B1E7591883BDFB00E555F5 /* gravity-folder.plist */; };
 		379BB99517F03F3700829B88 /* CCActionFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB8FC17F03F3700829B88 /* CCActionFrame.cpp */; };
 		379BB99617F03F3700829B88 /* CCActionFrameEasing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB8FE17F03F3700829B88 /* CCActionFrameEasing.cpp */; };
 		379BB99717F03F3700829B88 /* CCActionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB90017F03F3700829B88 /* CCActionManager.cpp */; };
@@ -596,6 +604,19 @@
 		1D6058910D05DD3D006BFB54 /* GravityMapCreater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GravityMapCreater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		32B1E7481883BDB800E555F5 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../Classes/GameLayer.h; sourceTree = "<group>"; };
+		32B1E7491883BDB800E555F5 /* MapCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapCell.cpp; path = ../Classes/MapCell.cpp; sourceTree = "<group>"; };
+		32B1E74A1883BDB800E555F5 /* MapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapCell.h; path = ../Classes/MapCell.h; sourceTree = "<group>"; };
+		32B1E74B1883BDB800E555F5 /* MapCreateScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapCreateScene.cpp; path = ../Classes/MapCreateScene.cpp; sourceTree = "<group>"; };
+		32B1E74C1883BDB800E555F5 /* MapCreateScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapCreateScene.h; path = ../Classes/MapCreateScene.h; sourceTree = "<group>"; };
+		32B1E74D1883BDB800E555F5 /* Stage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Stage.cpp; path = ../Classes/Stage.cpp; sourceTree = "<group>"; };
+		32B1E74E1883BDB800E555F5 /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage.h; path = ../Classes/Stage.h; sourceTree = "<group>"; };
+		32B1E74F1883BDB800E555F5 /* StageTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StageTools.cpp; path = ../Classes/StageTools.cpp; sourceTree = "<group>"; };
+		32B1E7501883BDB800E555F5 /* StageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StageTools.h; path = ../Classes/StageTools.h; sourceTree = "<group>"; };
+		32B1E7561883BDFB00E555F5 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
+		32B1E7571883BDFB00E555F5 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
+		32B1E7581883BDFB00E555F5 /* gravity-folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gravity-folder.png"; sourceTree = "<group>"; };
+		32B1E7591883BDFB00E555F5 /* gravity-folder.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "gravity-folder.plist"; sourceTree = "<group>"; };
 		379BB8FC17F03F3700829B88 /* CCActionFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionFrame.cpp; sourceTree = "<group>"; };
 		379BB8FD17F03F3700829B88 /* CCActionFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionFrame.h; sourceTree = "<group>"; };
 		379BB8FE17F03F3700829B88 /* CCActionFrameEasing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionFrameEasing.cpp; sourceTree = "<group>"; };
@@ -1261,6 +1282,15 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				32B1E7481883BDB800E555F5 /* GameLayer.h */,
+				32B1E7491883BDB800E555F5 /* MapCell.cpp */,
+				32B1E74A1883BDB800E555F5 /* MapCell.h */,
+				32B1E74B1883BDB800E555F5 /* MapCreateScene.cpp */,
+				32B1E74C1883BDB800E555F5 /* MapCreateScene.h */,
+				32B1E74D1883BDB800E555F5 /* Stage.cpp */,
+				32B1E74E1883BDB800E555F5 /* Stage.h */,
+				32B1E74F1883BDB800E555F5 /* StageTools.cpp */,
+				32B1E7501883BDB800E555F5 /* StageTools.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
@@ -1405,6 +1435,15 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32B1E7551883BDFB00E555F5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				32B1E7561883BDFB00E555F5 /* arial.ttf */,
+				32B1E7571883BDFB00E555F5 /* Marker Felt.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		379BB8FB17F03F3700829B88 /* Action */ = {
@@ -1709,6 +1748,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32B1E7551883BDFB00E555F5 /* fonts */,
+				32B1E7581883BDFB00E555F5 /* gravity-folder.png */,
+				32B1E7591883BDFB00E555F5 /* gravity-folder.plist */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -1799,6 +1841,8 @@
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
+				32B1E75D1883BDFB00E555F5 /* gravity-folder.plist in Resources */,
+				32B1E75C1883BDFB00E555F5 /* gravity-folder.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
@@ -1807,7 +1851,9 @@
 				379BB9CC17F03F3700829B88 /* json_internalarray.inl in Resources */,
 				379BB9CD17F03F3700829B88 /* json_internalmap.inl in Resources */,
 				379BB9D017F03F3700829B88 /* json_valueiterator.inl in Resources */,
+				32B1E75A1883BDFB00E555F5 /* arial.ttf in Resources */,
 				379BB9D217F03F3700829B88 /* sconscript in Resources */,
+				32B1E75B1883BDFB00E555F5 /* Marker Felt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1819,6 +1865,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */,
+				32B1E7521883BDB800E555F5 /* MapCreateScene.cpp in Sources */,
 				15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */,
 				15A3D9011682F7D5002FB0C5 /* b2CollideEdge.cpp in Sources */,
 				15A3D9021682F7D5002FB0C5 /* b2CollidePolygon.cpp in Sources */,
@@ -1940,6 +1987,7 @@
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
+				32B1E7511883BDB800E555F5 /* MapCell.cpp in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
 				15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */,
 				1A27573F1697CF2B00504026 /* CCEditBoxImplAndroid.cpp in Sources */,
@@ -1993,6 +2041,7 @@
 				379BB9A817F03F3700829B88 /* CCDataReaderHelper.cpp in Sources */,
 				379BB9A917F03F3700829B88 /* CCSpriteFrameCacheHelper.cpp in Sources */,
 				379BB9AA17F03F3700829B88 /* CCTransformHelp.cpp in Sources */,
+				32B1E7531883BDB800E555F5 /* Stage.cpp in Sources */,
 				379BB9AB17F03F3700829B88 /* CCTweenFunction.cpp in Sources */,
 				379BB9AC17F03F3700829B88 /* CCUtilMath.cpp in Sources */,
 				379BB9AD17F03F3700829B88 /* CCComAttribute.cpp in Sources */,
@@ -2027,6 +2076,7 @@
 				ED35BF4C183230FC002A0750 /* UIListViewEx.cpp in Sources */,
 				379BB9CE17F03F3700829B88 /* json_reader.cpp in Sources */,
 				379BB9CF17F03F3700829B88 /* json_value.cpp in Sources */,
+				32B1E7541883BDB800E555F5 /* StageTools.cpp in Sources */,
 				379BB9D117F03F3700829B88 /* json_writer.cpp in Sources */,
 				379BB9D317F03F3700829B88 /* GUIReader.cpp in Sources */,
 				379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */,
