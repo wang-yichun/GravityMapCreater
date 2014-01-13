@@ -151,6 +151,7 @@ void MapCell::refleshSprite_adv(char * param) {
 	if (primarySprite == NULL) {
 		primarySprite = CCSprite::createWithSpriteFrameName(frame_name.c_str());
 		primarySprite -> setAnchorPoint(CCPointMake(.5f,.5f));
+		primaryNode -> removeAllChildren();
 		primaryNode -> addChild(primarySprite, 10, 1);
 	} else {
 		primarySprite -> setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(frame_name.c_str()));

@@ -1,5 +1,12 @@
 #include "StageTools.h"
 
+CCSize StageTools::getMapSize() {
+	CCSize map_grid_size = getMapGridSize();
+	CCSize cell_size = getCellSize();
+	CCSize map_size = CCSizeMake(map_grid_size.width * cell_size.width, map_grid_size.height * cell_size.height);
+	return map_size;
+}
+
 CCPoint StageTools::idx2loc(int idx) {
 	CCAssert(isInScope(idx), "idx out of bound.");
 	CCPoint point;

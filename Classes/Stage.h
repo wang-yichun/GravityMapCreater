@@ -38,6 +38,7 @@ public:
 	
 	void resetMap(); // 项目中就应该在此替换为从数据库提取地图数据;
 	void refleshCellShow_adv(); // 更新整个地图显示;
+	void refleshCellShow_adv_nine(CCPoint loc); // 九宫格范围更新地图显示, loc为中心点;
 	void refleshCellShow_adv(CCPoint loc); // 更新loc位置的地图显示 处理圆角;
 private:
 

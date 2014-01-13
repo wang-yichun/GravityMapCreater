@@ -39,17 +39,17 @@ void Stage::resetMap() {
 			
 			MapCell mc;
 			//if ( (x + y) % 2 == 0) {
-			if (CCRANDOM_MINUS1_1() > 0) {
-				mc.setMapCell(CCPointMake(x,y), kNormal);
-			} else {
+			//if (CCRANDOM_MINUS1_1() > 0) {
+			//	mc.setMapCell(CCPointMake(x,y), kNormal);
+			//} else {
 				mc.setMapCell(CCPointMake(x,y), kNull);
-			}
+			//}
 
 			m_Map.push_back(mc);
 			
 			if (mc.primaryNode != NULL) {
 				CCPoint pos = loc2pos(CCPointMake(x,y));
-				CCLOG( "(%d,%d) - (%f,%f)", x ,y , pos.x, pos.y );
+				//CCLOG( "(%d,%d) - (%f,%f)", x ,y , pos.x, pos.y );
 				mc.primaryNode -> setPosition(pos);
 				m_mother -> addChild(mc.primaryNode, 100);
 				mc.infoTTF -> setPosition(pos);
@@ -62,6 +62,32 @@ void Stage::resetMap() {
 void Stage::refleshCellShow_adv() {
 	for (vector<MapCell>::iterator it = m_Map.begin(); it != m_Map.end(); it++) {
 		refleshCellShow_adv(it->loc);
+	}
+}
+
+void Stage::refleshCellShow_adv_nine(CCPoint loc) {
+	CCAssert(isInScope(loc), "Stage::refleshCellShow_adv loc out of bound");
+
+	CCPoint p[9];
+	p[0] = loc;
+	p[1] = CCPointMake(loc.x + 1, loc.y);
+	p[2] = CCPointMake(loc.x, loc.y + 1);
+	p[3] = CCPointMake(loc.x - 1, loc.y);
+	p[4] = CCPointMake(loc.x, loc.y - 1);
+	p[5] = CCPointMake(loc.x + 1, loc.y + 1);
+	p[6] = CCPointMake(loc.x - 1, loc.y + 1);
+	p[7] = CCPointMake(loc.x - 1, loc.y - 1);
+	p[8] = CCPointMake(loc.x + 1, loc.y - 1);
+
+	MapCell null_cell;
+	null_cell.code = kNull;
+
+	MapCell mapCell[9];
+
+	for (int i = 0; i < 9; i++) {
+		if (isInScope(p[i])) {
+			refleshCellShow_adv(p[i]);
+		}
 	}
 }
 

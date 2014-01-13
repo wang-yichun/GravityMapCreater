@@ -24,12 +24,21 @@ public:
 	virtual CCSize getMapGridSize() = 0;
 	virtual CCSize getCellSize() = 0;
 	virtual vector<MapCell>& getMap() = 0;
+	CCSize getMapSize();
 public:
-	bool isInScope(int idx) { return idx >= 0 || idx < getMap().size(); };
-	bool isInScope(CCPoint loc) {
-		int idx = int(getMapGridSize().width) * int(loc.y) + int(loc.x);
-		return (idx >= 0 && idx < getMap().size());
+	bool isInScope(int idx) { return idx >= 0 || (size_t)idx < getMap().size(); };
+	bool isInScope(CCPoint loc_or_pos, bool isPos = false) {
+		if (isPos){
+			CCSize map_size = getMapSize();
+			CCRect map_rect = CCRectMake(0,0,map_size.width,map_size.height);
+			return map_rect.containsPoint(loc_or_pos);
+		} else {
+			int idx = int(getMapGridSize().width) * int(loc_or_pos.y) + int(loc_or_pos.x);
+			return (idx >= 0 && (size_t)idx < getMap().size());
+		}
+		
 	}
+
 	CCPoint idx2loc(int idx);
 	int loc2idx(CCPoint loc);
 	MapCell& cell(int idx);
