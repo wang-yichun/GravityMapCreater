@@ -258,6 +258,7 @@ void MapCell::refleshSprite() {
 		if (primarySprite == NULL) {
 			primarySprite = CCSprite::createWithSpriteFrameName("mapcell/obst_p1111.png");
 			primarySprite -> setAnchorPoint(GetCellCodeAP(code));
+            primaryNode -> removeAllChildren();
 			primaryNode -> addChild(primarySprite, 10, 1);
 		} else {
 			primarySprite -> setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(frame_name.c_str()));

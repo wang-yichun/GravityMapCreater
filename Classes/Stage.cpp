@@ -84,7 +84,7 @@ void Stage::refleshCellShow_adv_nine(CCPoint loc) {
 	MapCell null_cell;
 	null_cell.code = kNull;
 
-	MapCell mapCell[9];
+//	MapCell mapCell[9];
 
 	for (int i = 0; i < 9; i++) {
 		if (isInScope(p[i])) {
