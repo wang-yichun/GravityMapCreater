@@ -119,7 +119,7 @@ void Stage::refleshCellShow_adv(CCPoint loc) {
 	char param[9];
 	memset(param, 0, sizeof(param));
 	for (int i = 0; i < 9; i++) {
-		if (MapCell::GetCellCodeIsNullShow(mapCell[i].code)) { // ÕÏ°­ÏÔÊ¾Âë;
+		if (MapCell::GetCellCodeIsNullShow(mapCell[i].code)) { // éšœç¢æ˜¾ç¤ºç ;
 			param[i] = '0';
 		} else {
 			param[i] = '1';

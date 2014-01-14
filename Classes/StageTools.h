@@ -44,10 +44,10 @@ public:
 	MapCell& cell(int idx);
 	MapCell& cell(CCPoint loc);
 
-	CCPoint idx2pos(int idx, enumAnchorType at = kC); // ¸ñ×Ó×ø±ê×ª»»ÆÁÄ»×ø±ê£¬µÚ¶ş²ÎÊıÎªÏà¶ÔÃªµãÎ»Î»ÖÃ;
+	CCPoint idx2pos(int idx, enumAnchorType at = kC); // æ ¼å­åæ ‡è½¬æ¢å±å¹•åæ ‡ï¼Œç¬¬äºŒå‚æ•°ä¸ºç›¸å¯¹é”šç‚¹ä½ä½ç½®;
 	CCPoint loc2pos(CCPoint loc, enumAnchorType at = kC);
 
-	CCPoint pos2loc(CCPoint pos); // ÆÁÄ»×ø±ê -> ¸ñ×Ó×ø±ê;
+	CCPoint pos2loc(CCPoint pos); // å±å¹•åæ ‡ -> æ ¼å­åæ ‡;
 	int pos2idx(CCPoint pos);
 
 	CCPoint AncharDiff(enumAnchorType at);

@@ -8,10 +8,11 @@ USING_NS_CC;
 USING_NS_CC_EXT;
 using namespace std;
 
-/************************************************************************/
-/* Ğ¡¹Ø;
-/* ÃèÊöÒ»¾ÖÓÎÏ·³¡¾°;
-/************************************************************************/
+//////////////////////////////////////////////////////////////////////////
+// StageTools
+// å°å…³;
+// æè¿°ä¸€å±€æ¸¸æˆåœºæ™¯;
+//////////////////////////////////////////////////////////////////////////
 class Stage :
 	public StageTools {
 private:
@@ -29,17 +30,17 @@ public:
 	vector<MapCell>& getMap() { return m_Map; }
 	//////////////////////////////////////////////////////////////////////////
 public:
-	CCSize m_MapGridSize; // ÕÏ°­µØÍ¼µÄ¸ñ×Ó”µÄ¿;
+	CCSize m_MapGridSize; // éšœç¢åœ°å›¾çš„æ ¼å­æ•¸ç›®;
 	CCSize m_CellSize;
-	vector<MapCell> m_Map; // µØÍ¼;
+	vector<MapCell> m_Map; // åœ°å›¾;
 
 	CCNode * m_mother;
 	void setMother(CCNode * mother);
 	
-	void resetMap(); // ÏîÄ¿ÖĞ¾ÍÓ¦¸ÃÔÚ´ËÌæ»»Îª´ÓÊı¾İ¿âÌáÈ¡µØÍ¼Êı¾İ;
-	void refleshCellShow_adv(); // ¸üĞÂÕû¸öµØÍ¼ÏÔÊ¾;
-	void refleshCellShow_adv_nine(CCPoint loc); // ¾Å¹¬¸ñ·¶Î§¸üĞÂµØÍ¼ÏÔÊ¾, locÎªÖĞĞÄµã;
-	void refleshCellShow_adv(CCPoint loc); // ¸üĞÂlocÎ»ÖÃµÄµØÍ¼ÏÔÊ¾ ´¦ÀíÔ²½Ç;
+	void resetMap(); // é¡¹ç›®ä¸­å°±åº”è¯¥åœ¨æ­¤æ›¿æ¢ä¸ºä»æ•°æ®åº“æå–åœ°å›¾æ•°æ®;
+	void refleshCellShow_adv(); // æ›´æ–°æ•´ä¸ªåœ°å›¾æ˜¾ç¤º;
+	void refleshCellShow_adv_nine(CCPoint loc); // ä¹å®«æ ¼èŒƒå›´æ›´æ–°åœ°å›¾æ˜¾ç¤º, locä¸ºä¸­å¿ƒç‚¹;
+	void refleshCellShow_adv(CCPoint loc); // æ›´æ–°locä½ç½®çš„åœ°å›¾æ˜¾ç¤º å¤„ç†åœ†è§’;
 private:
 
 };
