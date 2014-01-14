@@ -1,4 +1,4 @@
-#include "MapCell.h"
+﻿#include "MapCell.h"
 #include "CreaterConfig.h"
 
 MapCell::MapCell(): primaryNode(NULL), primarySprite(NULL), secondaryNode(NULL), secondarySprite(NULL), parent(NULL), infoTTF(NULL) {}
@@ -241,6 +241,13 @@ void MapCell::refleshSprite() {
 		break;
 	}
 	case kStart:{
+		frame_name = "mapobj/landing_point.png";
+		secondarySprite = CCSprite::createWithSpriteFrameName(frame_name.c_str());
+		secondarySprite -> setAnchorPoint(GetCellCodeAP(code));
+		secondaryNode -> addChild(secondarySprite, 10, 1);
+		break;
+	}
+	case kEnd:{
 		frame_name = "mapobj/landing_point.png";
 		secondarySprite = CCSprite::createWithSpriteFrameName(frame_name.c_str());
 		secondarySprite -> setAnchorPoint(GetCellCodeAP(code));
