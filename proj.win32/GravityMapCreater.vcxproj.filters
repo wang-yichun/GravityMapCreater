@@ -7,6 +7,9 @@
     <Filter Include="Classes">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\sqlite">
+      <UniqueIdentifier>{af69a07e-29b8-4cbe-bcf1-36d76200b1a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -32,6 +35,18 @@
     </ClCompile>
     <ClCompile Include="..\Classes\MapCell.cpp">
       <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sqlite\KompexSQLiteBlob.cpp">
+      <Filter>Classes\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sqlite\KompexSQLiteDatabase.cpp">
+      <Filter>Classes\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sqlite\KompexSQLiteStatement.cpp">
+      <Filter>Classes\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sqlite\sqlite3.c">
+      <Filter>Classes\sqlite</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +76,33 @@
     </ClInclude>
     <ClInclude Include="..\Classes\SystemManager.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\KompexSQLiteBlob.h">
+      <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\KompexSQLiteDatabase.h">
+      <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\KompexSQLiteException.h">
+      <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\KompexSQLitePrerequisites.h">
+      <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\KompexSQLiteStatement.h">
+      <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\KompexSQLiteStreamRedirection.h">
+      <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\sqlite_header.h">
+      <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\sqlite3.h">
+      <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sqlite\sqlite3ext.h">
+      <Filter>Classes\sqlite</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

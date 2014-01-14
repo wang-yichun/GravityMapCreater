@@ -1,4 +1,5 @@
 #include "SystemManager.h"
+#include "sqlite_header.h"
 
 SystemManager * SystemManager::s_SystemManager = NULL;
 
