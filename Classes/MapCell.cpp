@@ -253,12 +253,12 @@ void MapCell::refleshSprite() {
 	}
 	}
 
-	if (GetCellCodeIsNullShow(code)) {
+	if (GetCellCodeIsNullShow(code)) { // 显示非墙,清空primary node;
 		if (primarySprite != NULL) {
 			primarySprite -> removeFromParent();
 			primarySprite = NULL;
 		}
-	} else {
+	} else { // 显示墙; (这里的墙无法填充包含周边关系的圆角,他在Stage里面调用)
 		if (primarySprite == NULL) {
 			primarySprite = CCSprite::createWithSpriteFrameName("mapcell/obst_p1111.png");
 			primarySprite -> setAnchorPoint(GetCellCodeAP(code));
