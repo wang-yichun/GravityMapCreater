@@ -1,4 +1,5 @@
 #include "Stage.h"
+#include "CreaterConfig.h"
 
 Stage * Stage::s_Stage = NULL;
 
@@ -51,11 +52,14 @@ void Stage::resetMap() {
 				CCPoint pos = loc2pos(CCPointMake(x,y));
 				//CCLOG( "(%d,%d) - (%f,%f)", x ,y , pos.x, pos.y );
 				mc.primaryNode -> setPosition(pos);
+				m_mother -> addChild(mc.primaryNode, 100, 1);
 				mc.secondaryNode -> setPosition(pos);
-				m_mother -> addChild(mc.primaryNode, 100);
-				m_mother -> addChild(mc.secondaryNode, 110);
-				mc.infoTTF -> setPosition(pos);
-				m_mother -> addChild(mc.infoTTF, 200);
+				m_mother -> addChild(mc.secondaryNode, 110, 2);
+                
+                if (DEBUG_CELL_INFO_SHOW) {
+                    mc.infoTTF -> setPosition(pos);
+                    m_mother -> addChild(mc.infoTTF, 200, 3);
+                }
 			}
 		}
 	}

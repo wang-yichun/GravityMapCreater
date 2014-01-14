@@ -1,21 +1,24 @@
 #include "MapCell.h"
-
+#include "CreaterConfig.h"
 
 MapCell::MapCell(): primaryNode(NULL), primarySprite(NULL), secondaryNode(NULL), secondarySprite(NULL), parent(NULL), infoTTF(NULL) {}
 MapCell::~MapCell() {}
 
 void MapCell::setMapCell(CCPoint loc, enumMapCellCode code) {
 	this -> loc = loc;
-	stringstream ss;
-	ss << loc.x << "," << loc.y << endl;
-	ss << code;
-	if ( this -> infoTTF != NULL) {
-		this -> infoTTF -> setString(ss.str().c_str());
-	} else {
-		this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
-		this -> infoTTF -> setColor(ccc3(255,0,0));
-	}
-	ss.str("");
+	
+    if (DEBUG_CELL_INFO_SHOW) {
+        stringstream ss;
+        ss << loc.x << "," << loc.y << endl;
+        ss << code;
+        if ( this -> infoTTF != NULL) {
+            this -> infoTTF -> setString(ss.str().c_str());
+        } else {
+            this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
+            this -> infoTTF -> setColor(ccc3(255,0,0));
+        }
+        ss.str("");
+    }
 
 	if ( this -> primaryNode == NULL) {
 		this -> primaryNode = CCNode::create();
@@ -28,20 +31,21 @@ void MapCell::setMapCell(CCPoint loc, enumMapCellCode code) {
 }
 
 void MapCell::setCode(enumMapCellCode _code) {
-	this->code = _code;
-
-	this -> loc = loc;
-	stringstream ss;
-	ss << loc.x << "," << loc.y << endl;
-	ss << code;
-	if ( this -> infoTTF != NULL) {
-		this -> infoTTF -> setString(ss.str().c_str());
-	} else {
-		this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
-		this -> infoTTF -> setColor(ccc3(255,0,0));
-	}
-	ss.str("");
-
+	this -> code = _code;
+    
+    if (DEBUG_CELL_INFO_SHOW) {
+        stringstream ss;
+        ss << loc.x << "," << loc.y << endl;
+        ss << code;
+        if ( this -> infoTTF != NULL) {
+            this -> infoTTF -> setString(ss.str().c_str());
+        } else {
+            this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
+            this -> infoTTF -> setColor(ccc3(255,0,0));
+        }
+        ss.str("");
+    }
+    
 	refleshSprite();
 }
 
