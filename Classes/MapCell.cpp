@@ -253,12 +253,12 @@ void MapCell::refleshSprite() {
 	}
 	}
 
-	if (GetCellCodeIsNullShow(code)) { // ÏÔÊ¾·ÇÇ½,Çå¿Õprimary node;
+	if (GetCellCodeIsNullShow(code)) { // æ˜¾ç¤ºéžå¢™,æ¸…ç©ºprimary node;
 		if (primarySprite != NULL) {
 			primarySprite -> removeFromParent();
 			primarySprite = NULL;
 		}
-	} else { // ÏÔÊ¾Ç½; (ÕâÀïµÄÇ½ÎÞ·¨Ìî³ä°üº¬ÖÜ±ß¹ØÏµµÄÔ²½Ç,ËûÔÚStageÀïÃæµ÷ÓÃ)
+	} else { // æ˜¾ç¤ºå¢™; (è¿™é‡Œçš„å¢™æ— æ³•å¡«å……åŒ…å«å‘¨è¾¹å…³ç³»çš„åœ†è§’,å®ƒåœ¨Stageé‡Œé¢è°ƒç”¨)
 		if (primarySprite == NULL) {
 			primarySprite = CCSprite::createWithSpriteFrameName("mapcell/obst_p1111.png");
 			primarySprite -> setAnchorPoint(GetCellCodeAP(code));
@@ -268,6 +268,4 @@ void MapCell::refleshSprite() {
 			primarySprite -> setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(frame_name.c_str()));
 		}
 	}
-	
-	
 }

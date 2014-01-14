@@ -28,7 +28,7 @@ public:
 	CCSprite * primarySprite; // 主显示精灵; 被用来显示连接图了。
 	CCNode * secondaryNode; // 第二节点;
 	CCSprite * secondarySprite; // 第二显示精灵;
-	CCLabelTTF * infoTTF; // 測試;
+	CCLabelTTF * infoTTF; // 测试;
 	CCNode * parent; // 宿主;
 
 	void setMapCell(CCPoint loc, enumMapCellCode code); // create一些空的CCNode用于将来填充CCSprite,内部调用setCode,即只有在第一次初始化时调用,以后的改变使用setCode;
