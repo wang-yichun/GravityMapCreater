@@ -10,6 +10,9 @@
     <Filter Include="Classes\sqlite">
       <UniqueIdentifier>{af69a07e-29b8-4cbe-bcf1-36d76200b1a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\ytools">
+      <UniqueIdentifier>{af81395d-3098-4da3-ac56-ab1895f1decb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -47,6 +50,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\sqlite\sqlite3.c">
       <Filter>Classes\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ytools\YFile.cpp">
+      <Filter>Classes\ytools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\sqlite\sqlite3ext.h">
       <Filter>Classes\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ytools\YFile.h">
+      <Filter>Classes\ytools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

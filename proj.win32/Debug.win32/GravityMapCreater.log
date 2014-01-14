@@ -1,32 +1,9 @@
-﻿生成启动时间为 2014/1/15 0:26:36。
+﻿生成启动时间为 2014/1/15 0:58:27。
      1>项目“D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\GravityMapCreater.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\win32" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\CocosDenshion\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\extensions" /I..\Classes\sqlite /I..\Classes /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=2 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\AppDelegate.cpp ..\Classes\HelloWorldScene.cpp ..\Classes\MapCell.cpp ..\Classes\MapCreateScene.cpp ..\Classes\sqlite\KompexSQLiteBlob.cpp ..\Classes\sqlite\KompexSQLiteDatabase.cpp ..\Classes\sqlite\KompexSQLiteStatement.cpp ..\Classes\Stage.cpp ..\Classes\StageTools.cpp ..\Classes\SystemManager.cpp main.cpp
-         main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\win32" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\CocosDenshion\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\extensions" /I..\Classes\ytools /I..\Classes\sqlite /I..\Classes /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=2 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\SystemManager.cpp
          SystemManager.cpp
      1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\mapcell.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-         StageTools.cpp
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\stagetools.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\mapcell.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-         Stage.cpp
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\stage.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\stage.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\stagetools.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\mapcell.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-         KompexSQLiteStatement.cpp
-         KompexSQLiteDatabase.cpp
-         KompexSQLiteBlob.cpp
-         MapCreateScene.cpp
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\stage.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\stagetools.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\mapcell.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-         MapCell.cpp
-     1>d:\development\cocos2d-x\cocos2d-x-2.2.1\projects\gravitymapcreater\classes\mapcell.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-         HelloWorldScene.cpp
-         AppDelegate.cpp
-         正在生成代码...
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\win32" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\CocosDenshion\include" /I"D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\extensions" /I..\Classes\sqlite /I..\Classes /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=2 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TC /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\sqlite\sqlite3.c
-         sqlite3.c
        PreLinkEvent:
          if not exist "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\" mkdir "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\"
          xcopy /Y /Q "D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\..\..\..\external\libwebsockets\win32\lib\*.*" "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\"
@@ -44,16 +21,16 @@
          Debug.win32\Stage.obj
          Debug.win32\StageTools.obj
          Debug.win32\SystemManager.obj
+         Debug.win32\YFile.obj
          Debug.win32\main.obj
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libcocos2d.lib"
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libCocosDenshion.lib"
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libExtensions.lib"
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libBox2D.lib"
          "D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\libchipmunk.lib"
-     1>AppDelegate.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
          GravityMapCreater.vcxproj -> D:\Development\cocos2d-x\cocos2d-x-2.2.1\Debug.win32\GravityMapCreater.exe
      1>已完成生成项目“D:\Development\cocos2d-x\cocos2d-x-2.2.1\projects\GravityMapCreater\proj.win32\GravityMapCreater.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:33.73
+已用时间 00:00:06.04
