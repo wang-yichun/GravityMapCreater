@@ -1,23 +1,27 @@
 #include "MapCell.h"
 
 
-MapCell::MapCell(): primaryNode(NULL), primarySprite(NULL), parent(NULL), infoTTF(NULL) {}
+MapCell::MapCell(): primaryNode(NULL), primarySprite(NULL), secondaryNode(NULL), secondarySprite(NULL), parent(NULL), infoTTF(NULL) {}
 MapCell::~MapCell() {}
 
 void MapCell::setMapCell(CCPoint loc, enumMapCellCode code) {
 	this -> loc = loc;
 	stringstream ss;
-	ss << loc.x << "," << loc.y;
-	
+	ss << loc.x << "," << loc.y << endl;
+	ss << code;
 	if ( this -> infoTTF != NULL) {
 		this -> infoTTF -> setString(ss.str().c_str());
 	} else {
 		this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
 		this -> infoTTF -> setColor(ccc3(255,0,0));
 	}
+	ss.str("");
 
 	if ( this -> primaryNode == NULL) {
 		this -> primaryNode = CCNode::create();
+	}
+	if ( this -> secondaryNode == NULL) {
+		this -> secondaryNode = CCNode::create();
 	}
 
 	this -> setCode(code);
@@ -25,6 +29,19 @@ void MapCell::setMapCell(CCPoint loc, enumMapCellCode code) {
 
 void MapCell::setCode(enumMapCellCode _code) {
 	this->code = _code;
+
+	this -> loc = loc;
+	stringstream ss;
+	ss << loc.x << "," << loc.y << endl;
+	ss << code;
+	if ( this -> infoTTF != NULL) {
+		this -> infoTTF -> setString(ss.str().c_str());
+	} else {
+		this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
+		this -> infoTTF -> setColor(ccc3(255,0,0));
+	}
+	ss.str("");
+
 	refleshSprite();
 }
 
@@ -150,39 +167,102 @@ void MapCell::refleshSprite_adv(char * param) {
 
 	if (primarySprite == NULL) {
 		primarySprite = CCSprite::createWithSpriteFrameName(frame_name.c_str());
-		primarySprite -> setAnchorPoint(CCPointMake(.5f,.5f));
+		primarySprite -> setAnchorPoint(GetCellCodeAP(code));
+		primaryNode -> removeAllChildren();
 		primaryNode -> addChild(primarySprite, 10, 1);
 	} else {
 		primarySprite -> setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(frame_name.c_str()));
 	}
 }
 
-void MapCell::refleshSprite() {
-	string frame_name = "";
-	switch (code) {
+CCPoint MapCell::GetCellCodeAP(enumMapCellCode cell_code) {
+	CCPoint ap;
+	switch (cell_code) {
 	case kNull:
-		frame_name = "";
+		ap = CCPointMake(.5, .5);
 		break;
 	case kNormal:
-		frame_name = "mapcell/obst_p1111.png";
+		ap = CCPointMake(.5, .5);
+		break;
+	case kStart:
+		ap = CCPointMake(.25, .5);
+		break;
+	case kEnd:
+		ap = CCPointMake(.25, .5);
 		break;
 	default:
+		ap = CCPointZero;
+		break;
+	}
+	return ap;
+}
+
+bool MapCell::GetCellCodeIsNullShow(enumMapCellCode cell_code) {
+	bool isNullShow = false;
+	switch (cell_code) {
+	case kNull:
+		isNullShow = true;
+		break;
+	case kNormal:
+		isNullShow = false;
+		break;
+	case kStart:
+		isNullShow = true;
+		break;
+	case kEnd:
+		isNullShow = true;
+		break;
+	default:
+		isNullShow = true;
+		break;
+	}
+	return isNullShow;
+}
+
+void MapCell::refleshSprite() {
+	string frame_name = "";
+
+	if (secondarySprite != NULL) {
+		secondarySprite -> removeFromParent();
+		secondarySprite = NULL;
+	}
+
+	switch (code) {
+	case kNull:{
+		frame_name = "";
+		break;
+	}
+	case kNormal:{
+		frame_name = "mapcell/obst_p1111.png"; // no use.
+		break;
+	}
+	case kStart:{
+		frame_name = "mapobj/landing_point.png";
+		secondarySprite = CCSprite::createWithSpriteFrameName(frame_name.c_str());
+		secondarySprite -> setAnchorPoint(GetCellCodeAP(code));
+		secondaryNode -> addChild(secondarySprite, 10, 1);
+		break;
+	}
+	default:{
 		CCAssert(false, "MapCell::refleshSprite failed: code is unexcepted");
 		break;
 	}
+	}
 
-	if (frame_name == "") {
+	if (GetCellCodeIsNullShow(code)) {
 		if (primarySprite != NULL) {
 			primarySprite -> removeFromParent();
 			primarySprite = NULL;
 		}
 	} else {
 		if (primarySprite == NULL) {
-			primarySprite = CCSprite::createWithSpriteFrameName(frame_name.c_str());
-			primarySprite -> setAnchorPoint(CCPointMake(.5f,.5f));
+			primarySprite = CCSprite::createWithSpriteFrameName("mapcell/obst_p1111.png");
+			primarySprite -> setAnchorPoint(GetCellCodeAP(code));
 			primaryNode -> addChild(primarySprite, 10, 1);
 		} else {
 			primarySprite -> setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(frame_name.c_str()));
 		}
 	}
+	
+	
 }

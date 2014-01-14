@@ -1,5 +1,12 @@
 #include "StageTools.h"
 
+CCSize StageTools::getMapSize() {
+	CCSize map_grid_size = getMapGridSize();
+	CCSize cell_size = getCellSize();
+	CCSize map_size = CCSizeMake(map_grid_size.width * cell_size.width, map_grid_size.height * cell_size.height);
+	return map_size;
+}
+
 CCPoint StageTools::idx2loc(int idx) {
 	CCAssert(isInScope(idx), "idx out of bound.");
 	CCPoint point;
@@ -33,6 +40,20 @@ CCPoint StageTools::loc2pos(CCPoint loc, enumAnchorType at) {
 	CCAssert(isInScope(loc), "idx out of bound.");
 	CCPoint pos = CCPoint(getCellSize().width * loc.x, getCellSize().height * loc.y) + AncharDiff(at) + AncharDiff(kRT);
 	return pos;
+}
+
+CCPoint StageTools::pos2loc(CCPoint pos) {
+	CCSize cell_size = this->getCellSize();
+	CCPoint loc = ccp(floorf(pos.x / cell_size.width), floorf(pos.y / cell_size.height));
+	CCAssert(isInScope(loc), "pos out of bound.");
+	return loc;
+}
+
+int StageTools::pos2idx(CCPoint pos) {
+	CCSize cell_size = this->getCellSize();
+	CCPoint loc = ccp(floorf(pos.x / cell_size.width), floorf(pos.y / cell_size.height));
+	CCAssert(isInScope(loc), "pos out of bound.");
+	return loc2idx(loc);
 }
 
 CCPoint StageTools::AncharDiff(enumAnchorType at) {
