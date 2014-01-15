@@ -19,6 +19,8 @@ Stage::~Stage() {
 }
 
 bool Stage::init() {
+	m_stage_id = 100;
+	m_stage_name = "New Stage";
 	return true;
 }
 
@@ -47,20 +49,50 @@ void Stage::resetMap() {
 			//}
 
 			m_Map.push_back(mc);
-			
+
+			CCPoint pos = loc2pos(CCPointMake(x,y));
+
 			if (mc.primaryNode != NULL) {
-				CCPoint pos = loc2pos(CCPointMake(x,y));
-				//CCLOG( "(%d,%d) - (%f,%f)", x ,y , pos.x, pos.y );
 				mc.primaryNode -> setPosition(pos);
 				m_mother -> addChild(mc.primaryNode, 100, 1);
+			}
+			if (mc.secondaryNode != NULL) {
 				mc.secondaryNode -> setPosition(pos);
 				m_mother -> addChild(mc.secondaryNode, 110, 2);
-                
-                if (DEBUG_CELL_INFO_SHOW) {
-                    mc.infoTTF -> setPosition(pos);
-                    m_mother -> addChild(mc.infoTTF, 200, 3);
-                }
 			}
+			if (DEBUG_CELL_INFO_SHOW) {
+				mc.infoTTF -> setPosition(pos);
+				m_mother -> addChild(mc.infoTTF, 200, 3);
+			}
+		}
+	}
+}
+
+void Stage::clearMap() {
+	CCAssert(m_mother != NULL, "Stage.m_mother can't be null");
+
+	m_mother -> removeAllChildren();
+
+	m_Map.clear();
+}
+
+void Stage::refleshMapShow() {
+	CCAssert(m_mother != NULL, "Stage.m_mother can't be null");
+	for (int idx = 0; idx < m_Map.size(); idx++) {
+		CCPoint loc = idx2loc(idx);
+		CCPoint pos = loc2pos(loc);
+		MapCell& mc = m_Map[idx];
+		if (mc.primaryNode != NULL) {
+			mc.primaryNode -> setPosition(pos);
+			m_mother -> addChild(mc.primaryNode, 100, 1);
+		}
+		if (mc.secondaryNode != NULL) {
+			mc.secondaryNode -> setPosition(pos);
+			m_mother -> addChild(mc.secondaryNode, 110, 2);
+		}
+		if (DEBUG_CELL_INFO_SHOW) {
+			mc.infoTTF -> setPosition(pos);
+			m_mother -> addChild(mc.infoTTF, 200, 3);
 		}
 	}
 }

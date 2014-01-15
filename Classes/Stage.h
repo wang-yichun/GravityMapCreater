@@ -30,6 +30,8 @@ public:
 	vector<MapCell>& getMap() { return m_Map; }
 	//////////////////////////////////////////////////////////////////////////
 public:
+	int m_stage_id;
+	string m_stage_name;
 	CCSize m_MapGridSize; // 障碍地图的格子數目;
 	CCSize m_CellSize;
 	vector<MapCell> m_Map; // 地图;
@@ -38,6 +40,8 @@ public:
 	void setMother(CCNode * mother);
 	
 	void resetMap(); // 项目中就应该在此替换为从数据库提取地图数据;
+	void clearMap(); // resetMap的反操作;
+	void refleshMapShow(); // 根据当前的格子设置,更新节点关系;
 	void refleshCellShow_adv(); // 更新整个地图显示;
 	void refleshCellShow_adv_nine(CCPoint loc); // 九宫格范围更新地图显示, loc为中心点;
 	void refleshCellShow_adv(CCPoint loc); // 更新loc位置的地图显示 处理圆角;

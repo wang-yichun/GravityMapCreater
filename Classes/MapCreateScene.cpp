@@ -148,8 +148,10 @@ void MapCreate::touchBeganEvent(CCObject *pSender) {
 		CCLOG("touchBeganEvent arg:%s", btn->getName());
 		if (string(btn->getName()) == "btn_load") {
 			// TODO: LOAD DB
+			SystemManager::GetInstance() -> do_load_map();
 		} else if (string(btn->getName()) == "btn_save") {
 			// TODO: SAVE DB
+			SystemManager::GetInstance() -> do_save_map();
 		} else if (string(btn->getName()) == "btn_cell_null") {
 			SystemManager::GetInstance() -> m_chosedCellCode = kNull; // record btn status.
 		} else if (string(btn->getName()) == "btn_cell_normal") {

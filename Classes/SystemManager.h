@@ -23,9 +23,16 @@ public:
 
 	// db full path.
 	string m_db_full_path;
-	// db action.
+	// action.
+	void do_load_map();
+	void do_save_map();
+	// db unit action.
 	void insert_stage(const TStage& t_stage);
-	void select_stage();
+	void delete_stage(int stage_id);
+	void insert_stage_code_map(int stage_id);
+	void delete_stage_code_map(int stage_id);
+	void select_stage(int stage_id);
+	void select_stage_code_map(int stage_id);
 
 	// MapCreate active vars.
 	enumMapCellCode m_chosedCellCode;
