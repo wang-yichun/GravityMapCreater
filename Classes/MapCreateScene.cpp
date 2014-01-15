@@ -83,6 +83,13 @@ bool MapCreate::init()
 	UILayer * uiLayer = UILayer::create();
     
 	uiWidget = GUIReader::shareReader()->widgetFromJsonFile("CSProj/map_create_widget.ExportJson");
+	UIButton * btn_save = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_save"));
+	btn_save -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn_save -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+	UIButton * btn_load = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_load"));
+	btn_load -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn_load -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+
 	UIButton * btn_cell_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_null"));
 	btn_cell_null -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
 	btn_cell_null -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
@@ -139,7 +146,11 @@ void MapCreate::touchBeganEvent(CCObject *pSender) {
 	UIButton * btn = dynamic_cast<UIButton *>(pSender);
 	if (btn -> isBright()) {
 		CCLOG("touchBeganEvent arg:%s", btn->getName());
-		if (string(btn->getName()) == "btn_cell_null") {
+		if (string(btn->getName()) == "btn_load") {
+			// TODO: LOAD DB
+		} else if (string(btn->getName()) == "btn_save") {
+			// TODO: SAVE DB
+		} else if (string(btn->getName()) == "btn_cell_null") {
 			SystemManager::GetInstance() -> m_chosedCellCode = kNull; // record btn status.
 		} else if (string(btn->getName()) == "btn_cell_normal") {
 			SystemManager::GetInstance() -> m_chosedCellCode = kNormal; // record ..
