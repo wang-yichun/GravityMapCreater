@@ -170,6 +170,11 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		3241ED871886244200C9E813 /* KompexSQLiteBlob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3241ED771886244200C9E813 /* KompexSQLiteBlob.cpp */; };
+		3241ED881886244200C9E813 /* KompexSQLiteDatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3241ED791886244200C9E813 /* KompexSQLiteDatabase.cpp */; };
+		3241ED891886244200C9E813 /* KompexSQLiteStatement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3241ED7D1886244200C9E813 /* KompexSQLiteStatement.cpp */; };
+		3241ED8A1886244200C9E813 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 3241ED801886244200C9E813 /* sqlite3.c */; };
+		3241ED8B1886244200C9E813 /* YFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3241ED851886244200C9E813 /* YFile.cpp */; };
 		32B1E7511883BDB800E555F5 /* MapCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E7491883BDB800E555F5 /* MapCell.cpp */; };
 		32B1E7521883BDB800E555F5 /* MapCreateScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E74B1883BDB800E555F5 /* MapCreateScene.cpp */; };
 		32B1E7531883BDB800E555F5 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E74D1883BDB800E555F5 /* Stage.cpp */; };
@@ -605,6 +610,21 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32063870188519CD000410F5 /* CreaterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreaterConfig.h; path = ../Classes/CreaterConfig.h; sourceTree = "<group>"; };
+		3241ED771886244200C9E813 /* KompexSQLiteBlob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KompexSQLiteBlob.cpp; sourceTree = "<group>"; };
+		3241ED781886244200C9E813 /* KompexSQLiteBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KompexSQLiteBlob.h; sourceTree = "<group>"; };
+		3241ED791886244200C9E813 /* KompexSQLiteDatabase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KompexSQLiteDatabase.cpp; sourceTree = "<group>"; };
+		3241ED7A1886244200C9E813 /* KompexSQLiteDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KompexSQLiteDatabase.h; sourceTree = "<group>"; };
+		3241ED7B1886244200C9E813 /* KompexSQLiteException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KompexSQLiteException.h; sourceTree = "<group>"; };
+		3241ED7C1886244200C9E813 /* KompexSQLitePrerequisites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KompexSQLitePrerequisites.h; sourceTree = "<group>"; };
+		3241ED7D1886244200C9E813 /* KompexSQLiteStatement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KompexSQLiteStatement.cpp; sourceTree = "<group>"; };
+		3241ED7E1886244200C9E813 /* KompexSQLiteStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KompexSQLiteStatement.h; sourceTree = "<group>"; };
+		3241ED7F1886244200C9E813 /* KompexSQLiteStreamRedirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KompexSQLiteStreamRedirection.h; sourceTree = "<group>"; };
+		3241ED801886244200C9E813 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		3241ED811886244200C9E813 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		3241ED821886244200C9E813 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
+		3241ED831886244200C9E813 /* sqlite_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite_header.h; sourceTree = "<group>"; };
+		3241ED851886244200C9E813 /* YFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = YFile.cpp; sourceTree = "<group>"; };
+		3241ED861886244200C9E813 /* YFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFile.h; sourceTree = "<group>"; };
 		32B1E7481883BDB800E555F5 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../Classes/GameLayer.h; sourceTree = "<group>"; };
 		32B1E7491883BDB800E555F5 /* MapCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapCell.cpp; path = ../Classes/MapCell.cpp; sourceTree = "<group>"; };
 		32B1E74A1883BDB800E555F5 /* MapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapCell.h; path = ../Classes/MapCell.h; sourceTree = "<group>"; };
@@ -1284,6 +1304,8 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3241ED761886244200C9E813 /* sqlite */,
+				3241ED841886244200C9E813 /* ytools */,
 				32B1E7711883BFA800E555F5 /* SystemManager.cpp */,
 				32B1E7721883BFA800E555F5 /* SystemManager.h */,
 				32B1E7481883BDB800E555F5 /* GameLayer.h */,
@@ -1440,6 +1462,37 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3241ED761886244200C9E813 /* sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				3241ED771886244200C9E813 /* KompexSQLiteBlob.cpp */,
+				3241ED781886244200C9E813 /* KompexSQLiteBlob.h */,
+				3241ED791886244200C9E813 /* KompexSQLiteDatabase.cpp */,
+				3241ED7A1886244200C9E813 /* KompexSQLiteDatabase.h */,
+				3241ED7B1886244200C9E813 /* KompexSQLiteException.h */,
+				3241ED7C1886244200C9E813 /* KompexSQLitePrerequisites.h */,
+				3241ED7D1886244200C9E813 /* KompexSQLiteStatement.cpp */,
+				3241ED7E1886244200C9E813 /* KompexSQLiteStatement.h */,
+				3241ED7F1886244200C9E813 /* KompexSQLiteStreamRedirection.h */,
+				3241ED801886244200C9E813 /* sqlite3.c */,
+				3241ED811886244200C9E813 /* sqlite3.h */,
+				3241ED821886244200C9E813 /* sqlite3ext.h */,
+				3241ED831886244200C9E813 /* sqlite_header.h */,
+			);
+			name = sqlite;
+			path = ../Classes/sqlite;
+			sourceTree = "<group>";
+		};
+		3241ED841886244200C9E813 /* ytools */ = {
+			isa = PBXGroup;
+			children = (
+				3241ED851886244200C9E813 /* YFile.cpp */,
+				3241ED861886244200C9E813 /* YFile.h */,
+			);
+			name = ytools;
+			path = ../Classes/ytools;
 			sourceTree = "<group>";
 		};
 		32B1E7671883BF9300E555F5 /* fonts */ = {
@@ -1869,6 +1922,7 @@
 			files = (
 				15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */,
 				32B1E7521883BDB800E555F5 /* MapCreateScene.cpp in Sources */,
+				3241ED871886244200C9E813 /* KompexSQLiteBlob.cpp in Sources */,
 				15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */,
 				15A3D9011682F7D5002FB0C5 /* b2CollideEdge.cpp in Sources */,
 				15A3D9021682F7D5002FB0C5 /* b2CollidePolygon.cpp in Sources */,
@@ -1885,6 +1939,7 @@
 				15A3D90D1682F7D5002FB0C5 /* b2Math.cpp in Sources */,
 				15A3D90E1682F7D5002FB0C5 /* b2Settings.cpp in Sources */,
 				15A3D90F1682F7D5002FB0C5 /* b2StackAllocator.cpp in Sources */,
+				3241ED881886244200C9E813 /* KompexSQLiteDatabase.cpp in Sources */,
 				15A3D9101682F7D5002FB0C5 /* b2Timer.cpp in Sources */,
 				15A3D9111682F7D5002FB0C5 /* b2Body.cpp in Sources */,
 				15A3D9121682F7D5002FB0C5 /* b2ContactManager.cpp in Sources */,
@@ -1914,6 +1969,7 @@
 				15A3D9291682F7D5002FB0C5 /* b2WeldJoint.cpp in Sources */,
 				15A3D92A1682F7D5002FB0C5 /* b2WheelJoint.cpp in Sources */,
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,
+				3241ED891886244200C9E813 /* KompexSQLiteStatement.cpp in Sources */,
 				15A3D9951682F7F9002FB0C5 /* chipmunk.c in Sources */,
 				15A3D9971682F7F9002FB0C5 /* cpConstraint.c in Sources */,
 				15A3D9981682F7F9002FB0C5 /* cpDampedRotarySpring.c in Sources */,
@@ -1977,6 +2033,7 @@
 				15A3DA501682F826002FB0C5 /* CCControlStepper.cpp in Sources */,
 				15A3DA511682F826002FB0C5 /* CCControlSwitch.cpp in Sources */,
 				15A3DA521682F826002FB0C5 /* CCControlUtils.cpp in Sources */,
+				3241ED8A1886244200C9E813 /* sqlite3.c in Sources */,
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
 				15A3DA541682F826002FB0C5 /* CCScale9Sprite.cpp in Sources */,
 				15A3DA551682F826002FB0C5 /* CCEditBox.cpp in Sources */,
@@ -2084,6 +2141,7 @@
 				379BB9D117F03F3700829B88 /* json_writer.cpp in Sources */,
 				379BB9D317F03F3700829B88 /* GUIReader.cpp in Sources */,
 				379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */,
+				3241ED8B1886244200C9E813 /* YFile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2113,7 +2171,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
-					"COCOS2D_DEBUG=1",
+					"COCOS2D_DEBUG=2",
 					CC_ENABLE_CHIPMUNK_INTEGRATION,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
