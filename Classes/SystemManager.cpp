@@ -34,9 +34,15 @@ bool SystemManager::init() {
 
 	m_db_full_path = writable_path + "game_data.sqlite";
 
-	//TStage t_stage;
-	//insert_stage(t_stage);
-	select_stage();
+	TStage t_stage;
+	t_stage.cell_height = 40;
+	t_stage.cell_width = 40;
+	t_stage.map_grid_height = 20;
+	t_stage.map_grid_width = 32;
+	t_stage.stage_id = 100;
+	t_stage.stage_name = "New Stage";
+	insert_stage(t_stage);
+	//select_stage();
 
 	return true;
 }
@@ -56,12 +62,12 @@ void SystemManager::insert_stage(const TStage& t_stage) {
 
 		pStmt -> Sql("INSERT INTO stage (cell_height, cell_width, map_grid_height, map_grid_width, stage_id, stage_name) VALUES(@cell_height, @cell_width, @map_grid_height, @map_grid_width, @stage_id, @stage_name)");
 
-		pStmt -> BindInt(1, 40);
-		pStmt -> BindInt(2, 40);
-		pStmt -> BindInt(3, 20);
-		pStmt -> BindInt(4, 32);
-		pStmt -> BindInt(5, 102);
-		pStmt -> BindString(6, "中文关卡名");
+		pStmt -> BindInt(1, t_stage.cell_height);
+		pStmt -> BindInt(2, t_stage.cell_width);
+		pStmt -> BindInt(3, t_stage.map_grid_height);
+		pStmt -> BindInt(4, t_stage.map_grid_width);
+		pStmt -> BindInt(5, t_stage.stage_id);
+		pStmt -> BindString(6, t_stage.stage_name);
 
 		pStmt -> ExecuteAndFree();
 
