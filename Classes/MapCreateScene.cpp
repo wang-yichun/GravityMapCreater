@@ -102,6 +102,12 @@ bool MapCreate::init()
 	UIButton * btn_cell_end = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_end"));
 	btn_cell_end -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
 	btn_cell_end -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+	UIButton * btn_cell_poll_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_poll_null"));
+	btn_cell_poll_null -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn_cell_poll_null -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
+	UIButton * btn_cell_poll_red = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_poll_red"));
+	btn_cell_poll_red -> addPushDownEvent(this, coco_pushselector(MapCreate::touchBeganEvent));
+	btn_cell_poll_red -> addReleaseEvent(this, coco_releaseselector(MapCreate::touchEndEvent));
 
 	uiWidget -> setTag(1);
 	uiLayer -> addWidget(uiWidget);
@@ -160,6 +166,10 @@ void MapCreate::touchBeganEvent(CCObject *pSender) {
 			SystemManager::GetInstance() -> m_chosedCellCode = kStart; // record ..
 		} else if (string(btn->getName()) == "btn_cell_end") {
 			SystemManager::GetInstance() -> m_chosedCellCode = kEnd; // record ..
+		} else if (string(btn->getName()) == "btn_cell_poll_null") {
+			SystemManager::GetInstance() -> m_chosedCellPollCode = emcpcNull; // record ..
+		} else if (string(btn->getName()) == "btn_cell_poll_red") {
+			SystemManager::GetInstance() -> m_chosedCellPollCode = emcpcPoll; // record ..
 		} 
 	} else {
 		CCLOG("touchBeganEvent arg:%s (not Bright)", btn->getName());
@@ -175,6 +185,7 @@ void MapCreate::touchEndEvent(CCObject *pSender) {
 		CCLOG("touchEndEvent arg:%s (not Bright)", btn->getName());
 	}
 	setCurrentCellCodeBtnEnabled();
+	setCurrentCellPollCodeBtnEnabled();
 }
 
 void MapCreate::setAllCellCodeBtnEnabled(bool enabled) {
@@ -209,6 +220,32 @@ void MapCreate::setCurrentCellCodeBtnEnabled() {
 		break;
 	case kEnd:
 		btn_cell_end -> setBright(false);
+		break;
+	default:
+		break;
+	}
+}
+
+void MapCreate::setAllCellPollCodeBtnEnabled(bool enabled) {
+	UIButton * btn_cell_poll_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_poll_null"));
+	UIButton * btn_cell_poll_red = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_poll_red"));
+
+	btn_cell_poll_null -> setBright(enabled);
+	btn_cell_poll_red -> setBright(enabled);
+}
+
+void MapCreate::setCurrentCellPollCodeBtnEnabled() {
+	UIButton * btn_cell_poll_null = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_poll_null"));
+	UIButton * btn_cell_poll_red = dynamic_cast<UIButton *>(uiWidget -> getChildByName("root") -> getChildByName("btn_cell_poll_red"));
+
+	setAllCellPollCodeBtnEnabled(true);
+	enumMapCellPollCode current_chosed_cell_poll_code = SystemManager::GetInstance() -> m_chosedCellPollCode;
+	switch (current_chosed_cell_poll_code) {
+	case emcpcNull:
+		btn_cell_poll_null -> setBright(false);
+		break;
+	case emcpcPoll:
+		btn_cell_poll_red -> setBright(false);
 		break;
 	default:
 		break;

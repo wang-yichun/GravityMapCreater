@@ -707,6 +707,25 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
+			<key>mapcell/poll_red.png</key>
+			<dict>
+				<key>width</key>
+				<integer>40</integer>
+				<key>height</key>
+				<integer>40</integer>
+				<key>originalWidth</key>
+				<integer>40</integer>
+				<key>originalHeight</key>
+				<integer>40</integer>
+				<key>x</key>
+				<integer>882</integer>
+				<key>y</key>
+				<integer>102</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
 			<key>mapobj/landing_point.png</key>
 			<dict>
 				<key>width</key>
@@ -718,7 +737,7 @@
 				<key>originalHeight</key>
 				<integer>40</integer>
 				<key>x</key>
-				<integer>882</integer>
+				<integer>924</integer>
 				<key>y</key>
 				<integer>102</integer>
 				<key>offsetX</key>

@@ -36,6 +36,9 @@ public:
 
 	void setAllCellCodeBtnEnabled(bool enabled);
 	void setCurrentCellCodeBtnEnabled();
+
+	void setAllCellPollCodeBtnEnabled(bool enabled);
+	void setCurrentCellPollCodeBtnEnabled();
 };
 
 #endif // __MAPCREATE_SCENE_H__

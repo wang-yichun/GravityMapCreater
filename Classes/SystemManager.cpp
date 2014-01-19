@@ -15,7 +15,7 @@ SystemManager::~SystemManager()
 
 bool SystemManager::init() {
 	m_chosedCellCode = kNull;
-
+	m_chosedCellPollCode = emcpcNull;
 	// db init
 	stringstream ss_info;
 

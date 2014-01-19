@@ -36,4 +36,5 @@ public:
 
 	// MapCreate active vars.
 	enumMapCellCode m_chosedCellCode;
+	enumMapCellPollCode m_chosedCellPollCode;
 };

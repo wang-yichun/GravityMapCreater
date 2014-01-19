@@ -19,8 +19,8 @@ Stage::~Stage() {
 }
 
 bool Stage::init() {
-	m_stage_id = 100;
-	m_stage_name = "New Stage";
+	m_stage_id = 1;
+	m_stage_name = "What a world?";
 	return true;
 }
 

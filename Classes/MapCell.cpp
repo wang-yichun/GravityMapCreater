@@ -1,24 +1,25 @@
 ﻿#include "MapCell.h"
 #include "CreaterConfig.h"
 
-MapCell::MapCell(): primaryNode(NULL), primarySprite(NULL), secondaryNode(NULL), secondarySprite(NULL), parent(NULL), infoTTF(NULL) {}
+MapCell::MapCell(): primaryNode(NULL), primarySprite(NULL), secondaryNode(NULL), secondarySprite(NULL),
+	pollNode(NULL), pollSprite(NULL), parent(NULL), infoTTF(NULL) {}
 MapCell::~MapCell() {}
 
 void MapCell::setMapCell(CCPoint loc, enumMapCellCode code) {
 	this -> loc = loc;
-	
-    if (DEBUG_CELL_INFO_SHOW) {
-        stringstream ss;
-        ss << loc.x << "," << loc.y << endl;
-        ss << code;
-        if ( this -> infoTTF != NULL) {
-            this -> infoTTF -> setString(ss.str().c_str());
-        } else {
-            this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
-            this -> infoTTF -> setColor(ccc3(255,0,0));
-        }
-        ss.str("");
-    }
+
+	if (DEBUG_CELL_INFO_SHOW) {
+		stringstream ss;
+		ss << loc.x << "," << loc.y << endl;
+		ss << code;
+		if ( this -> infoTTF != NULL) {
+			this -> infoTTF -> setString(ss.str().c_str());
+		} else {
+			this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
+			this -> infoTTF -> setColor(ccc3(255,0,0));
+		}
+		ss.str("");
+	}
 
 	if ( this -> primaryNode == NULL) {
 		this -> primaryNode = CCNode::create();
@@ -26,27 +27,41 @@ void MapCell::setMapCell(CCPoint loc, enumMapCellCode code) {
 	if ( this -> secondaryNode == NULL) {
 		this -> secondaryNode = CCNode::create();
 	}
+	if ( this -> pollNode == NULL) {
+		this -> pollNode = CCNode::create();
+	}
 
 	this -> setCode(code);
 }
 
 void MapCell::setCode(enumMapCellCode _code) {
 	this -> code = _code;
-    
-    if (DEBUG_CELL_INFO_SHOW) {
-        stringstream ss;
-        ss << loc.x << "," << loc.y << endl;
-        ss << code;
-        if ( this -> infoTTF != NULL) {
-            this -> infoTTF -> setString(ss.str().c_str());
-        } else {
-            this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
-            this -> infoTTF -> setColor(ccc3(255,0,0));
-        }
-        ss.str("");
-    }
-    
+	this -> poll_code = emcpcNull;
+	if (DEBUG_CELL_INFO_SHOW) {
+		stringstream ss;
+		ss << loc.x << "," << loc.y << endl;
+		ss << code;
+		if ( this -> infoTTF != NULL) {
+			this -> infoTTF -> setString(ss.str().c_str());
+		} else {
+			this -> infoTTF = CCLabelTTF::create(ss.str().c_str(),"Arial",10);
+			this -> infoTTF -> setColor(ccc3(255,0,0));
+		}
+		ss.str("");
+	}
+
 	refleshSprite();
+}
+
+void MapCell::setPollCode(enumMapCellPollCode poll_code) {
+	if (this -> poll_code == emcpcNull) {
+		this -> poll_code = poll_code;
+		pollSprite = CCSprite::createWithSpriteFrameName("mapcell/poll_red.png");
+		pollSprite -> setOpacity(0);
+		pollSprite -> runAction(CCFadeIn::create(1.0f));
+		pollNode -> removeAllChildren();
+		pollNode -> addChild(pollSprite);
+	}
 }
 
 void MapCell::setParent(CCNode *pNode) {
@@ -235,29 +250,29 @@ void MapCell::refleshSprite() {
 	case kNull:{
 		frame_name = "";
 		break;
-	}
+			   }
 	case kNormal:{
 		frame_name = "mapcell/obst_p1111.png"; // no use.
 		break;
-	}
+				 }
 	case kStart:{
 		frame_name = "mapobj/landing_point.png";
 		secondarySprite = CCSprite::createWithSpriteFrameName(frame_name.c_str());
 		secondarySprite -> setAnchorPoint(GetCellCodeAP(code));
 		secondaryNode -> addChild(secondarySprite, 10, 1);
 		break;
-	}
+				}
 	case kEnd:{
 		frame_name = "mapobj/landing_point.png";
 		secondarySprite = CCSprite::createWithSpriteFrameName(frame_name.c_str());
 		secondarySprite -> setAnchorPoint(GetCellCodeAP(code));
 		secondaryNode -> addChild(secondarySprite, 10, 1);
 		break;
-	}
+			  }
 	default:{
 		CCAssert(false, "MapCell::refleshSprite failed: code is unexcepted");
 		break;
-	}
+			}
 	}
 
 	if (GetCellCodeIsNullShow(code)) { // 显示非墙,清空primary node;
@@ -269,7 +284,7 @@ void MapCell::refleshSprite() {
 		if (primarySprite == NULL) {
 			primarySprite = CCSprite::createWithSpriteFrameName("mapcell/obst_p1111.png");
 			primarySprite -> setAnchorPoint(GetCellCodeAP(code));
-            primaryNode -> removeAllChildren();
+			primaryNode -> removeAllChildren();
 			primaryNode -> addChild(primarySprite, 10, 1);
 		} else {
 			primarySprite -> setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(frame_name.c_str()));
